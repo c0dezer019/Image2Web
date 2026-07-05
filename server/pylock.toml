@@ -134,17 +134,6 @@ url = "https://files.pythonhosted.org/packages/9e/7c/8e3c6ad324ea5cb36604fc3f968
 sha256 = "cf15e1e9e667ddb0ad63811e60bd11390d1aac838ca4a7a23f421807b2308189"
 
 [[packages]]
-name = "flake8"
-version = "7.3.0"
-
-[[packages.wheels]]
-name = "flake8-7.3.0-py2.py3-none-any.whl"
-url = "https://files.pythonhosted.org/packages/9f/56/13ab06b4f93ca7cac71078fbe37fcea175d3216f31f85c3168a6bbd0bb9a/flake8-7.3.0-py2.py3-none-any.whl"
-
-[packages.wheels.hashes]
-sha256 = "b9696257b9ce8beb888cdbe31cf885c90d31928fe202be0889a7cdafad32f01e"
-
-[[packages]]
 name = "h11"
 version = "0.16.0"
 
@@ -189,17 +178,6 @@ url = "https://files.pythonhosted.org/packages/ba/53/771bd891eb0f236f32145d6a177
 sha256 = "c4a9f1707e4823d54dfec6c33fa3697d302aed536ed352a7ebb5a061ddb869d0"
 
 [[packages]]
-name = "httpx"
-version = "0.28.1"
-
-[[packages.wheels]]
-name = "httpx-0.28.1-py3-none-any.whl"
-url = "https://files.pythonhosted.org/packages/2a/39/e50c7c3a983047577ee07d2a9e53faf5a69493943ec3f6a384bdc792deb2/httpx-0.28.1-py3-none-any.whl"
-
-[packages.wheels.hashes]
-sha256 = "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad"
-
-[[packages]]
 name = "httpx2"
 version = "2.5.0"
 
@@ -231,17 +209,6 @@ requested-revision = "575f9894cc72fc5165da79904d359403f25d3c93"
 commit-id = "575f9894cc72fc5165da79904d359403f25d3c93"
 
 [[packages]]
-name = "iniconfig"
-version = "2.3.0"
-
-[[packages.wheels]]
-name = "iniconfig-2.3.0-py3-none-any.whl"
-url = "https://files.pythonhosted.org/packages/cb/b1/3846dd7f199d53cb17f49cba7e651e9ce294d8497c8c150530ed11865bb8/iniconfig-2.3.0-py3-none-any.whl"
-
-[packages.wheels.hashes]
-sha256 = "f631c04d2c48c52b84d0d0549c99ff3859c98df65b3101406327ecc7d53fbf12"
-
-[[packages]]
 name = "limits"
 version = "5.8.0"
 
@@ -251,17 +218,6 @@ url = "https://files.pythonhosted.org/packages/b9/98/cb5ca20618d205a09d5bec7591f
 
 [packages.wheels.hashes]
 sha256 = "ae1b008a43eb43073c3c579398bd4eb4c795de60952532dc24720ab45e1ac6b8"
-
-[[packages]]
-name = "mccabe"
-version = "0.7.0"
-
-[[packages.wheels]]
-name = "mccabe-0.7.0-py2.py3-none-any.whl"
-url = "https://files.pythonhosted.org/packages/27/1a/1f68f9ba0c207934b35b86a8ca3aad8395a3d6dd7921c0686e23853ff5a9/mccabe-0.7.0-py2.py3-none-any.whl"
-
-[packages.wheels.hashes]
-sha256 = "6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e"
 
 [[packages]]
 name = "packaging"
@@ -284,28 +240,6 @@ url = "https://files.pythonhosted.org/packages/11/8d/d2532ad2a603ca2b93ad9f51357
 
 [packages.wheels.hashes]
 sha256 = "4bfd07bc812fbd20395212969e41931001fd59eb55a60658b0e5710872e95286"
-
-[[packages]]
-name = "pluggy"
-version = "1.6.0"
-
-[[packages.wheels]]
-name = "pluggy-1.6.0-py3-none-any.whl"
-url = "https://files.pythonhosted.org/packages/54/20/4d324d65cc6d9205fabedc306948156824eb9f0ee1633355a8f7ec5c66bf/pluggy-1.6.0-py3-none-any.whl"
-
-[packages.wheels.hashes]
-sha256 = "e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746"
-
-[[packages]]
-name = "pycodestyle"
-version = "2.14.0"
-
-[[packages.wheels]]
-name = "pycodestyle-2.14.0-py2.py3-none-any.whl"
-url = "https://files.pythonhosted.org/packages/d7/27/a58ddaf8c588a3ef080db9d0b7e0b97215cee3a45df74f3a94dbbf5c893a/pycodestyle-2.14.0-py2.py3-none-any.whl"
-
-[packages.wheels.hashes]
-sha256 = "dd6bf7cb4ee77f8e016f9c8e74a35ddd9f67e1d5fd4184d86c3b98e07099f42d"
 
 [[packages]]
 name = "pycparser"
@@ -341,28 +275,6 @@ url = "https://files.pythonhosted.org/packages/89/1d/8eff589b45bb8190a9d12c49cfa
 sha256 = "7a5f930472650a82629163023e630d160863fce524c616f4e5186e5de9d9a49b"
 
 [[packages]]
-name = "pyflakes"
-version = "3.4.0"
-
-[[packages.wheels]]
-name = "pyflakes-3.4.0-py2.py3-none-any.whl"
-url = "https://files.pythonhosted.org/packages/c2/2f/81d580a0fb83baeb066698975cb14a618bdbed7720678566f1b046a95fe8/pyflakes-3.4.0-py2.py3-none-any.whl"
-
-[packages.wheels.hashes]
-sha256 = "f742a7dbd0d9cb9ea41e9a24a918996e8170c799fa528688d40dd582c8265f4f"
-
-[[packages]]
-name = "pygments"
-version = "2.20.0"
-
-[[packages.wheels]]
-name = "pygments-2.20.0-py3-none-any.whl"
-url = "https://files.pythonhosted.org/packages/f4/7e/a72dd26f3b0f4f2bf1dd8923c85f7ceb43172af56d63c7383eb62b332364/pygments-2.20.0-py3-none-any.whl"
-
-[packages.wheels.hashes]
-sha256 = "81a9e26dd42fd28a23a2d169d86d7ac03b46e2f8b59ed4698fb4785f946d0176"
-
-[[packages]]
 name = "pyperclip"
 version = "1.11.0"
 
@@ -372,17 +284,6 @@ url = "https://files.pythonhosted.org/packages/df/80/fc9d01d5ed37ba4c42ca2b55b43
 
 [packages.wheels.hashes]
 sha256 = "299403e9ff44581cb9ba2ffeed69c7aa96a008622ad0c46cb575ca75b5b84273"
-
-[[packages]]
-name = "pytest"
-version = "9.1.1"
-
-[[packages.wheels]]
-name = "pytest-9.1.1-py3-none-any.whl"
-url = "https://files.pythonhosted.org/packages/24/25/1de2678b631f5a49215c6c96fff41ba892b0a34df68d6d80292b1b48aa7f/pytest-9.1.1-py3-none-any.whl"
-
-[packages.wheels.hashes]
-sha256 = "37a86b45efb9a47a61a36449063e8e18d0cab3161329fc099eb21783169c4f0c"
 
 [[packages]]
 name = "python-dotenv"
