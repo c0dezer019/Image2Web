@@ -5346,7 +5346,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L178",
+      "source_location": "L184",
       "weight": 1.0,
       "source": "app_page_home",
       "target": "lib_aspect_ratio_heightforwidth"
@@ -5357,7 +5357,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L187",
+      "source_location": "L193",
       "weight": 1.0,
       "source": "app_page_home",
       "target": "lib_aspect_ratio_widthforheight"
@@ -5434,7 +5434,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L153",
+      "source_location": "L159",
       "weight": 1.0,
       "source": "app_page_home",
       "target": "lib_image_compress_compressimageifneeded"
@@ -5445,7 +5445,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L136",
+      "source_location": "L142",
       "weight": 1.0,
       "source": "app_page_home",
       "target": "lib_image_dimensions_getimagedimensions"
@@ -11167,5 +11167,5 @@
       "source_file": ".github/workflows/graphify-freshness.yml"
     }
   ],
-  "built_at_commit": "c341affa67ce525b52a4e61ff1862a832e24788b"
+  "built_at_commit": "a03d79984c1c195dc8a078ca9b9719c4301afb4f"
 }
