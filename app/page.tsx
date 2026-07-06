@@ -281,8 +281,8 @@ export default function Home() {
       <style>{`
         @media (max-width: 1080px) { .cli-gutter { display: none !important; } }
         @media (max-width: 760px) {
-          .section-controls { order: 3; }
-          .section-output { order: 2; }
+          .section-controls { order: 3 !important; }
+          .section-output { order: 2 !important; }
         }
       `}</style>
       <Link
