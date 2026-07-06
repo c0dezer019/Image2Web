@@ -25,14 +25,14 @@ sha256 = "1f02e8b43a8fbbc3f3e0d4f0f4bfc8131bcb4eebe8849b8e5c773f3a1c582a53"
 
 [[packages]]
 name = "anyio"
-version = "4.14.0"
+version = "4.13.0"
 
 [[packages.wheels]]
-name = "anyio-4.14.0-py3-none-any.whl"
-url = "https://files.pythonhosted.org/packages/ba/16/9826f089383c593cdfc4a6e5aca94d9e91ae1692c57af82c3b2aa5e810f7/anyio-4.14.0-py3-none-any.whl"
+name = "anyio-4.13.0-py3-none-any.whl"
+url = "https://files.pythonhosted.org/packages/da/42/e921fccf5015463e32a3cf6ee7f980a6ed0f395ceeaa45060b61d86486c2/anyio-4.13.0-py3-none-any.whl"
 
 [packages.wheels.hashes]
-sha256 = "dd9b7a2a9799ed6552fde617b2c5df02b7fdd7d88392fc48101e51bae46164d9"
+sha256 = "08b310f9e24a9594186fd75b4f73f4a4152069e3853f1ed8bfbf58369f4ad708"
 
 [[packages]]
 name = "cairocffi"
@@ -55,6 +55,17 @@ url = "https://files.pythonhosted.org/packages/bf/e0/5011747466414c12cac8a8df77a
 
 [packages.wheels.hashes]
 sha256 = "4b82d07d145377dffdfc19d9791bd5fb65539bb4da0adecf0bdbd9cd4ffd7c68"
+
+[[packages]]
+name = "certifi"
+version = "2026.5.20"
+
+[[packages.wheels]]
+name = "certifi-2026.5.20-py3-none-any.whl"
+url = "https://files.pythonhosted.org/packages/59/8c/57e832b7af6d7c5abe66eb3fbe3a3a32f4d11ea23a1aa7131371035be991/certifi-2026.5.20-py3-none-any.whl"
+
+[packages.wheels.hashes]
+sha256 = "3c52e209ba0a4ad7aebe60436a4ab349c39e1e602e8c134221e546902ad25897"
 
 [[packages]]
 name = "cffi"
@@ -113,14 +124,14 @@ sha256 = "597bfef186b6f60181535a29fbe44865ce137a5079f295b479886c82729d5f3f"
 
 [[packages]]
 name = "fastapi"
-version = "0.137.2"
+version = "0.139.0"
 
 [[packages.wheels]]
-name = "fastapi-0.137.2-py3-none-any.whl"
-url = "https://files.pythonhosted.org/packages/2f/ed/0c6b644e99fb5697d8bdcd36cdb47c52e77a63fc7a1514b1f03a6ecab955/fastapi-0.137.2-py3-none-any.whl"
+name = "fastapi-0.139.0-py3-none-any.whl"
+url = "https://files.pythonhosted.org/packages/9e/7c/8e3c6ad324ea5cb36604fc3f968554887891c316d9dfde57761611d907ad/fastapi-0.139.0-py3-none-any.whl"
 
 [packages.wheels.hashes]
-sha256 = "791d36261e916a98b25ac85ee591bc3db159394070f6d3d096d94fb378f60ce2"
+sha256 = "cf15e1e9e667ddb0ad63811e60bd11390d1aac838ca4a7a23f421807b2308189"
 
 [[packages]]
 name = "h11"
@@ -134,15 +145,26 @@ url = "https://files.pythonhosted.org/packages/04/4b/29cac41a4d98d144bf5f6d33995
 sha256 = "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86"
 
 [[packages]]
-name = "httpcore2"
-version = "2.4.0"
+name = "httpcore"
+version = "1.0.9"
 
 [[packages.wheels]]
-name = "httpcore2-2.4.0-py3-none-any.whl"
-url = "https://files.pythonhosted.org/packages/7c/72/4fdf2306143a92a471fad9f3655aa542d43aa9188a7c9534e82c9aecf837/httpcore2-2.4.0-py3-none-any.whl"
+name = "httpcore-1.0.9-py3-none-any.whl"
+url = "https://files.pythonhosted.org/packages/7e/f5/f66802a942d491edb555dd61e3a9961140fd64c90bce1eafd741609d334d/httpcore-1.0.9-py3-none-any.whl"
 
 [packages.wheels.hashes]
-sha256 = "5218779da5d6e3c2013ac706121abfb3815d450e0613495c0de50264dce58242"
+sha256 = "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55"
+
+[[packages]]
+name = "httpcore2"
+version = "2.5.0"
+
+[[packages.wheels]]
+name = "httpcore2-2.5.0-py3-none-any.whl"
+url = "https://files.pythonhosted.org/packages/c9/a1/7564199d1a8728fe737b0a72e5b3f8d92dfe085a74ddf7cdd83bce5f206d/httpcore2-2.5.0-py3-none-any.whl"
+
+[packages.wheels.hashes]
+sha256 = "5ce35188de461d31e8d000bfb8ef8bf22c6c16587a211e5571deaa5e9bdf842a"
 
 [[packages]]
 name = "httptools"
@@ -157,14 +179,14 @@ sha256 = "c4a9f1707e4823d54dfec6c33fa3697d302aed536ed352a7ebb5a061ddb869d0"
 
 [[packages]]
 name = "httpx2"
-version = "2.4.0"
+version = "2.5.0"
 
 [[packages.wheels]]
-name = "httpx2-2.4.0-py3-none-any.whl"
-url = "https://files.pythonhosted.org/packages/29/45/82bc57c3d9c3314f663b67cc057f1c017a6450685dde513f4f8db5cf431f/httpx2-2.4.0-py3-none-any.whl"
+name = "httpx2-2.5.0-py3-none-any.whl"
+url = "https://files.pythonhosted.org/packages/31/22/859d8252dad9bc9adee34b52e62cde621ece07b042ccb2ab4da1be46695f/httpx2-2.5.0-py3-none-any.whl"
 
 [packages.wheels.hashes]
-sha256 = "425acd99297829599decf6701386dd84db3542597d36d3e2e4def930ecd57fd9"
+sha256 = "3d2d4d9cf4b61f1a1f46a95947cfdb47e80cb56a2f91c6256ac8f58e4891df41"
 
 [[packages]]
 name = "idna"
@@ -183,7 +205,7 @@ name = "image2"
 [packages.vcs]
 type = "git"
 url = "https://github.com/c0dezer019/image2.git"
-requested-revision = "v1.5.2"
+requested-revision = "575f9894cc72fc5165da79904d359403f25d3c93"
 commit-id = "575f9894cc72fc5165da79904d359403f25d3c93"
 
 [[packages]]
@@ -309,14 +331,14 @@ sha256 = "3acb61561dc9d687e3d3669362ff6a439de9ba44e2fed3a9c165da26b4b83e28"
 
 [[packages]]
 name = "starlette"
-version = "1.3.1"
+version = "1.3.0"
 
 [[packages.wheels]]
-name = "starlette-1.3.1-py3-none-any.whl"
-url = "https://files.pythonhosted.org/packages/ec/bb/2799cc2ede3ed41131f8975621e7213dfc7ef4acbbaadfa440f32500c370/starlette-1.3.1-py3-none-any.whl"
+name = "starlette-1.3.0-py3-none-any.whl"
+url = "https://files.pythonhosted.org/packages/16/42/56d31c5ee52dab0ad893d67d4f9c00f5ba2b4c5d87f392eca2c3fdce01cf/starlette-1.3.0-py3-none-any.whl"
 
 [packages.wheels.hashes]
-sha256 = "c7372aae11c3c3f26a42df7bd626cec2f47d03483d261d369516a615a53714c6"
+sha256 = "ff4ca1bc23de6a45cdfbbeb9b3caaea524c9221cdd8a6684ad7a4f651a83890b"
 
 [[packages]]
 name = "tinycss2"
@@ -364,14 +386,14 @@ sha256 = "4ed1cacbdc298c220f1bd249ed5287caa16f34d44ef4e9c3d0cbad5b521545e7"
 
 [[packages]]
 name = "uvicorn"
-version = "0.49.0"
+version = "0.50.0"
 
 [[packages.wheels]]
-name = "uvicorn-0.49.0-py3-none-any.whl"
-url = "https://files.pythonhosted.org/packages/88/fa/e1388bbcf24ef3274f45c0c1c7b501fd14971037c1b6ee23610553307497/uvicorn-0.49.0-py3-none-any.whl"
+name = "uvicorn-0.50.0-py3-none-any.whl"
+url = "https://files.pythonhosted.org/packages/a0/3a/eb70620ca2bf8213603d5c731460687c49fee38b0072f0b4a637781f0a53/uvicorn-0.50.0-py3-none-any.whl"
 
 [packages.wheels.hashes]
-sha256 = "ba3d14c3ee7e41c6c654c46c9eb489d33213cdd30aa1696eab1374337c13f68f"
+sha256 = "05f0eb19edf38208f79f43df8a63081b48df31b0cd1e5997be957a4dc97d1b19"
 
 [[packages]]
 name = "uvloop"
