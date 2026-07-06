@@ -136,16 +136,6 @@ def test_ansi_grid_min_lum_changes_output(sample_image_path):
     assert lifted["cells"] != base["cells"]
 
 
-def test_analyze_image_returns_auto_params(sample_image_path):
-    from converters import analyze_image
-
-    result = analyze_image(sample_image_path)
-
-    assert set(result.keys()) == {"contrast", "brightness", "saturate", "min_lum"}
-    for value in result.values():
-        assert isinstance(value, float)
-
-
 def test_ascii_grid_invert_changes_pixels(sample_image_path):
     base = convert_to_ascii_grid(sample_image_path, width=20, contrast=1.5, brightness=1.0)
     inverted = convert_to_ascii_grid(
@@ -185,14 +175,6 @@ def test_ansi_grid_blur_changes_output(sample_image_path):
         sample_image_path, width=20, contrast=1.5, brightness=1.0, palette="truecolor", blur=4.0
     )
     assert blurred["cells"] != base["cells"]
-
-
-def test_analyze_image_invert_changes_params(sample_image_path):
-    from converters import analyze_image
-
-    base = analyze_image(sample_image_path)
-    inverted = analyze_image(sample_image_path, invert=True)
-    assert inverted != base
 
 
 def test_preprocess_handles_rgba_invert(tmp_path):

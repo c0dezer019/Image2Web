@@ -38,6 +38,6 @@ Bump `VERSION` on every PR that changes server behavior. Use semver:
 ## Runtime Gotchas
 - CORS allowlist in `main.py` — update when adding new frontend origins.
 - `LOG_LEVEL` env var controls logging verbosity (default: `INFO`).
-- Rate limiting via slowapi — per-IP on `/convert` and `/analyze`. 429 = too many requests.
+- Rate limiting via slowapi — per-IP on `/convert`. 429 = too many requests.
 - `image2` dep installs from GitHub (not PyPI) — first `pip install` slow.
 - Requires Python 3.14 (matches Dockerfile).

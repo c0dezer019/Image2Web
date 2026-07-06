@@ -26,10 +26,6 @@ interface ControlsBarProps {
   dense: boolean;
   monochrome: boolean;
   fontColor: string;
-  hasFile: boolean;
-  analyzing: boolean;
-  optimizing: boolean;
-  onAuto: () => void;
   onWidthChange: (n: number) => void;
   onContrastChange: (n: number) => void;
   onBrightnessChange: (n: number) => void;
@@ -293,10 +289,6 @@ export function ControlsBar({
   dense,
   monochrome,
   fontColor,
-  hasFile,
-  analyzing,
-  optimizing,
-  onAuto,
   onWidthChange,
   onContrastChange,
   onBrightnessChange,
@@ -329,22 +321,10 @@ export function ControlsBar({
         marginTop: 18,
       }}
     >
-      <div style={{ flex: "1 1 100%", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
+      <div style={{ flex: "1 1 100%" }}>
         <span style={{ ...labelStyle, marginBottom: 0 }}>
           Enhance — Contrast / Brightness / Saturate / Min luminance
         </span>
-        <button
-          type="button"
-          onClick={onAuto}
-          disabled={!hasFile || analyzing || optimizing}
-          style={{
-            ...segButtonStyle(false),
-            opacity: !hasFile || analyzing || optimizing ? 0.4 : 1,
-            cursor: !hasFile || analyzing || optimizing ? "default" : "pointer",
-          }}
-        >
-          {optimizing ? "Optimizing…" : analyzing ? "Analyzing…" : "Auto"}
-        </button>
       </div>
 
       <SliderField

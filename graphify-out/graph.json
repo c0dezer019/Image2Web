@@ -4,6 +4,33 @@
   "graph": {
     "hyperedges": [
       {
+        "id": "web_server_stack",
+        "label": "Web Server Stack",
+        "nodes": [
+          "server_fastapi",
+          "server_uvicorn",
+          "server_slowapi",
+          "server_pydantic"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9,
+        "source_file": "server/requirements.txt"
+      },
+      {
+        "id": "image_processing_stack",
+        "label": "Image Processing Stack",
+        "nodes": [
+          "server_image2",
+          "server_cairosvg",
+          "server_pillow"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9,
+        "source_file": "server/requirements.txt"
+      },
+      {
         "id": "ci_cd_deploy_pipeline",
         "label": "CI/CD Pipeline: CodeQL -> Docker Image -> Deploy",
         "nodes": [
@@ -53,7 +80,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_api_bug_route",
-      "community": 14,
+      "community": 17,
       "norm_label": "route.ts"
     },
     {
@@ -63,7 +90,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "app_api_bug_route_feedbackpayload",
-      "community": 14,
+      "community": 17,
       "norm_label": "feedbackpayload"
     },
     {
@@ -73,7 +100,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "app_api_bug_route_bugpayload",
-      "community": 14,
+      "community": 17,
       "norm_label": "bugpayload"
     },
     {
@@ -83,7 +110,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "app_api_bug_route_bugreportpayload",
-      "community": 14,
+      "community": 17,
       "norm_label": "bugreportpayload"
     },
     {
@@ -93,7 +120,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "app_api_bug_route_isvalidpayload",
-      "community": 14,
+      "community": 17,
       "norm_label": "isvalidpayload()"
     },
     {
@@ -103,7 +130,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "app_api_bug_route_post",
-      "community": 14,
+      "community": 17,
       "norm_label": "post()"
     },
     {
@@ -113,7 +140,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_api_crash_report_route",
-      "community": 19,
+      "community": 22,
       "norm_label": "route.ts"
     },
     {
@@ -123,7 +150,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "app_api_crash_report_route_post",
-      "community": 19,
+      "community": 22,
       "norm_label": "post()"
     },
     {
@@ -133,7 +160,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_download_page",
-      "community": 12,
+      "community": 10,
       "norm_label": "page.tsx"
     },
     {
@@ -143,7 +170,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_download_page_fallback_assets",
-      "community": 12,
+      "community": 10,
       "norm_label": "fallback_assets"
     },
     {
@@ -153,7 +180,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "app_download_page_fetchrelease",
-      "community": 12,
+      "community": 10,
       "norm_label": "fetchrelease()"
     },
     {
@@ -163,7 +190,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "app_download_page_downloadpage",
-      "community": 12,
+      "community": 10,
       "norm_label": "downloadpage()"
     },
     {
@@ -193,7 +220,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_eula_page",
-      "community": 8,
+      "community": 7,
       "norm_label": "page.tsx"
     },
     {
@@ -203,7 +230,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "app_eula_page_metadata",
-      "community": 8,
+      "community": 7,
       "norm_label": "metadata"
     },
     {
@@ -213,7 +240,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_eula_page_eulapage",
-      "community": 8,
+      "community": 7,
       "norm_label": "eulapage()"
     },
     {
@@ -223,7 +250,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_feedback_page",
-      "community": 8,
+      "community": 7,
       "norm_label": "page.tsx"
     },
     {
@@ -233,7 +260,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "app_feedback_page_metadata",
-      "community": 8,
+      "community": 7,
       "norm_label": "metadata"
     },
     {
@@ -243,7 +270,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "app_feedback_page_feedbackpage",
-      "community": 8,
+      "community": 7,
       "norm_label": "feedbackpage()"
     },
     {
@@ -273,7 +300,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_layout",
-      "community": 24,
+      "community": 1,
       "norm_label": "layout.tsx"
     },
     {
@@ -283,7 +310,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "app_layout_spacegrotesk",
-      "community": 24,
+      "community": 1,
       "norm_label": "spacegrotesk"
     },
     {
@@ -293,7 +320,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "app_layout_dmmono",
-      "community": 24,
+      "community": 1,
       "norm_label": "dmmono"
     },
     {
@@ -303,7 +330,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "app_layout_metadata",
-      "community": 24,
+      "community": 1,
       "norm_label": "metadata"
     },
     {
@@ -313,7 +340,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "app_layout_rootlayout",
-      "community": 24,
+      "community": 1,
       "norm_label": "rootlayout()"
     },
     {
@@ -323,24 +350,24 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_page",
-      "community": 1,
+      "community": 10,
       "norm_label": "page.tsx"
     },
     {
       "label": "FIXED_ENHANCE_DEFAULTS",
       "file_type": "code",
       "source_file": "app/page.tsx",
-      "source_location": "L26",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "app_page_fixed_enhance_defaults",
-      "community": 1,
+      "community": 10,
       "norm_label": "fixed_enhance_defaults"
     },
     {
       "label": "Home()",
       "file_type": "code",
       "source_file": "app/page.tsx",
-      "source_location": "L33",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "app_page_home",
       "community": 0,
@@ -353,7 +380,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_privacy_page",
-      "community": 8,
+      "community": 7,
       "norm_label": "page.tsx"
     },
     {
@@ -363,7 +390,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "app_privacy_page_metadata",
-      "community": 8,
+      "community": 7,
       "norm_label": "metadata"
     },
     {
@@ -373,7 +400,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_privacy_page_privacypage",
-      "community": 8,
+      "community": 7,
       "norm_label": "privacypage()"
     },
     {
@@ -383,7 +410,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_terms_page",
-      "community": 8,
+      "community": 7,
       "norm_label": "page.tsx"
     },
     {
@@ -393,7 +420,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "app_terms_page_metadata",
-      "community": 8,
+      "community": 7,
       "norm_label": "metadata"
     },
     {
@@ -403,7 +430,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_terms_page_termspage",
-      "community": 8,
+      "community": 7,
       "norm_label": "termspage()"
     },
     {
@@ -413,7 +440,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_controlsbar",
-      "community": 2,
+      "community": 11,
       "norm_label": "controlsbar.tsx"
     },
     {
@@ -423,157 +450,157 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "components_controlsbar_controlsbarprops",
-      "community": 2,
+      "community": 11,
       "norm_label": "controlsbarprops"
     },
     {
       "label": "labelStyle",
       "file_type": "code",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L53",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "components_controlsbar_labelstyle",
-      "community": 2,
+      "community": 11,
       "norm_label": "labelstyle"
     },
     {
       "label": "sliderStyle()",
       "file_type": "code",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L63",
+      "source_location": "L59",
       "_origin": "ast",
       "id": "components_controlsbar_sliderstyle",
-      "community": 2,
+      "community": 11,
       "norm_label": "sliderstyle()"
     },
     {
       "label": "numberInputStyle",
       "file_type": "code",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L67",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "components_controlsbar_numberinputstyle",
-      "community": 2,
+      "community": 11,
       "norm_label": "numberinputstyle"
     },
     {
       "label": "textInputStyle",
       "file_type": "code",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L77",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "components_controlsbar_textinputstyle",
-      "community": 2,
+      "community": 11,
       "norm_label": "textinputstyle"
     },
     {
       "label": "segButtonStyle()",
       "file_type": "code",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L82",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "components_controlsbar_segbuttonstyle",
-      "community": 2,
+      "community": 11,
       "norm_label": "segbuttonstyle()"
     },
     {
       "label": "isActivePreset()",
       "file_type": "code",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L98",
+      "source_location": "L94",
       "_origin": "ast",
       "id": "components_controlsbar_isactivepreset",
-      "community": 2,
+      "community": 11,
       "norm_label": "isactivepreset()"
     },
     {
       "label": "SliderFieldProps",
       "file_type": "code",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L109",
+      "source_location": "L105",
       "_origin": "ast",
       "id": "components_controlsbar_sliderfieldprops",
-      "community": 2,
+      "community": 11,
       "norm_label": "sliderfieldprops"
     },
     {
       "label": "SliderNumberInput()",
       "file_type": "code",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L119",
+      "source_location": "L115",
       "_origin": "ast",
       "id": "components_controlsbar_slidernumberinput",
-      "community": 2,
+      "community": 11,
       "norm_label": "slidernumberinput()"
     },
     {
       "label": "SliderField()",
       "file_type": "code",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L164",
+      "source_location": "L160",
       "_origin": "ast",
       "id": "components_controlsbar_sliderfield",
-      "community": 2,
+      "community": 11,
       "norm_label": "sliderfield()"
     },
     {
       "label": "BgInputProps",
       "file_type": "code",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L193",
+      "source_location": "L189",
       "_origin": "ast",
       "id": "components_controlsbar_bginputprops",
-      "community": 2,
+      "community": 11,
       "norm_label": "bginputprops"
     },
     {
       "label": "isValidCssColor()",
       "file_type": "code",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L198",
+      "source_location": "L194",
       "_origin": "ast",
       "id": "components_controlsbar_isvalidcsscolor",
-      "community": 2,
+      "community": 11,
       "norm_label": "isvalidcsscolor()"
     },
     {
       "label": "BgInput()",
       "file_type": "code",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L212",
+      "source_location": "L208",
       "_origin": "ast",
       "id": "components_controlsbar_bginput",
-      "community": 2,
+      "community": 11,
       "norm_label": "bginput()"
     },
     {
       "label": "ColorInputProps",
       "file_type": "code",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L239",
+      "source_location": "L235",
       "_origin": "ast",
       "id": "components_controlsbar_colorinputprops",
-      "community": 2,
+      "community": 11,
       "norm_label": "colorinputprops"
     },
     {
       "label": "ColorInput()",
       "file_type": "code",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L247",
+      "source_location": "L243",
       "_origin": "ast",
       "id": "components_controlsbar_colorinput",
-      "community": 2,
+      "community": 11,
       "norm_label": "colorinput()"
     },
     {
       "label": "ControlsBar()",
       "file_type": "code",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L275",
+      "source_location": "L271",
       "_origin": "ast",
       "id": "components_controlsbar_controlsbar",
-      "community": 2,
+      "community": 11,
       "norm_label": "controlsbar()"
     },
     {
@@ -583,7 +610,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_cookiebanner",
-      "community": 24,
+      "community": 1,
       "norm_label": "cookiebanner.tsx"
     },
     {
@@ -593,7 +620,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "components_cookiebanner_cookiebanner",
-      "community": 24,
+      "community": 1,
       "norm_label": "cookiebanner()"
     },
     {
@@ -633,7 +660,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_downloadlinks",
-      "community": 12,
+      "community": 10,
       "norm_label": "downloadlinks.tsx"
     },
     {
@@ -643,7 +670,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "components_downloadlinks_props",
-      "community": 12,
+      "community": 10,
       "norm_label": "props"
     },
     {
@@ -653,7 +680,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "components_downloadlinks_downloadlinks",
-      "community": 12,
+      "community": 10,
       "norm_label": "downloadlinks()"
     },
     {
@@ -663,7 +690,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_dropzone",
-      "community": 13,
+      "community": 10,
       "norm_label": "dropzone.tsx"
     },
     {
@@ -673,7 +700,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "components_dropzone_dropzoneprops",
-      "community": 13,
+      "community": 10,
       "norm_label": "dropzoneprops"
     },
     {
@@ -683,7 +710,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "components_dropzone_dropzone",
-      "community": 13,
+      "community": 10,
       "norm_label": "dropzone()"
     },
     {
@@ -743,7 +770,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_footer",
-      "community": 1,
+      "community": 10,
       "norm_label": "footer.tsx"
     },
     {
@@ -753,7 +780,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "components_footer_link_style",
-      "community": 1,
+      "community": 10,
       "norm_label": "link_style"
     },
     {
@@ -763,7 +790,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "components_footer_footer",
-      "community": 1,
+      "community": 10,
       "norm_label": "footer()"
     },
     {
@@ -783,7 +810,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "components_globalerrorlistener_globalerrorlistener",
-      "community": 24,
+      "community": 1,
       "norm_label": "globalerrorlistener()"
     },
     {
@@ -793,7 +820,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_legalpage",
-      "community": 8,
+      "community": 7,
       "norm_label": "legalpage.tsx"
     },
     {
@@ -803,7 +830,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "components_legalpage_section_style",
-      "community": 8,
+      "community": 7,
       "norm_label": "section_style"
     },
     {
@@ -813,7 +840,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "components_legalpage_section_label_style",
-      "community": 8,
+      "community": 7,
       "norm_label": "section_label_style"
     },
     {
@@ -823,7 +850,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "components_legalpage_p_style",
-      "community": 8,
+      "community": 7,
       "norm_label": "p_style"
     },
     {
@@ -833,7 +860,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "components_legalpage_ul_style",
-      "community": 8,
+      "community": 7,
       "norm_label": "ul_style"
     },
     {
@@ -843,7 +870,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "components_legalpage_effective_date_style",
-      "community": 8,
+      "community": 7,
       "norm_label": "effective_date_style"
     },
     {
@@ -853,7 +880,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "components_legalpage_legalpageprops",
-      "community": 8,
+      "community": 7,
       "norm_label": "legalpageprops"
     },
     {
@@ -863,7 +890,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "components_legalpage_legalpage",
-      "community": 8,
+      "community": 7,
       "norm_label": "legalpage()"
     },
     {
@@ -873,7 +900,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_outputcanvas",
-      "community": 1,
+      "community": 10,
       "norm_label": "outputcanvas.tsx"
     },
     {
@@ -883,7 +910,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "components_outputcanvas_outputcanvasprops",
-      "community": 1,
+      "community": 10,
       "norm_label": "outputcanvasprops"
     },
     {
@@ -893,7 +920,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "components_outputcanvas_outputcanvas",
-      "community": 1,
+      "community": 10,
       "norm_label": "outputcanvas"
     },
     {
@@ -903,7 +930,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_outputheader",
-      "community": 1,
+      "community": 10,
       "norm_label": "outputheader.tsx"
     },
     {
@@ -913,7 +940,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "components_outputheader_outputheaderprops",
-      "community": 1,
+      "community": 10,
       "norm_label": "outputheaderprops"
     },
     {
@@ -923,7 +950,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "components_outputheader_tabs",
-      "community": 1,
+      "community": 10,
       "norm_label": "tabs"
     },
     {
@@ -933,7 +960,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "components_outputheader_tabstyle",
-      "community": 1,
+      "community": 10,
       "norm_label": "tabstyle()"
     },
     {
@@ -943,7 +970,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "components_outputheader_outputheader",
-      "community": 1,
+      "community": 10,
       "norm_label": "outputheader()"
     },
     {
@@ -993,7 +1020,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_versionfooter",
-      "community": 0,
+      "community": 10,
       "norm_label": "versionfooter.tsx"
     },
     {
@@ -1003,7 +1030,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "components_versionfooter_versionfooter",
-      "community": 0,
+      "community": 10,
       "norm_label": "versionfooter()"
     },
     {
@@ -1013,7 +1040,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "eslint_config",
-      "community": 20,
+      "community": 23,
       "norm_label": "eslint.config.mjs"
     },
     {
@@ -1023,7 +1050,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "eslint_config_eslintconfig",
-      "community": 20,
+      "community": 23,
       "norm_label": "eslintconfig"
     },
     {
@@ -1033,7 +1060,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_aspect_ratio",
-      "community": 2,
+      "community": 11,
       "norm_label": "aspect-ratio.ts"
     },
     {
@@ -1043,7 +1070,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "lib_aspect_ratio_aspectratiopreset",
-      "community": 2,
+      "community": 11,
       "norm_label": "aspectratiopreset"
     },
     {
@@ -1053,7 +1080,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "lib_aspect_ratio_aspect_ratio_presets",
-      "community": 2,
+      "community": 11,
       "norm_label": "aspect_ratio_presets"
     },
     {
@@ -1063,7 +1090,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "lib_aspect_ratio_heightforwidth",
-      "community": 2,
+      "community": 11,
       "norm_label": "heightforwidth()"
     },
     {
@@ -1073,7 +1100,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "lib_aspect_ratio_widthforheight",
-      "community": 2,
+      "community": 11,
       "norm_label": "widthforheight()"
     },
     {
@@ -1207,20 +1234,10 @@
       "norm_label": "effectivefontsize()"
     },
     {
-      "label": "getAutoParams()",
-      "file_type": "code",
-      "source_file": "lib/convert.ts",
-      "source_location": "L89",
-      "_origin": "ast",
-      "id": "lib_convert_getautoparams",
-      "community": 0,
-      "norm_label": "getautoparams()"
-    },
-    {
       "label": "convertImage()",
       "file_type": "code",
       "source_file": "lib/convert.ts",
-      "source_location": "L114",
+      "source_location": "L79",
       "_origin": "ast",
       "id": "lib_convert_convertimage",
       "community": 0,
@@ -1233,7 +1250,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_cookie_consent",
-      "community": 24,
+      "community": 1,
       "norm_label": "cookie-consent.ts"
     },
     {
@@ -1243,7 +1260,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_cookie_consent_consentstate",
-      "community": 24,
+      "community": 1,
       "norm_label": "consentstate"
     },
     {
@@ -1253,7 +1270,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "lib_cookie_consent_getconsent",
-      "community": 24,
+      "community": 1,
       "norm_label": "getconsent()"
     },
     {
@@ -1263,7 +1280,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "lib_cookie_consent_setconsent",
-      "community": 24,
+      "community": 1,
       "norm_label": "setconsent()"
     },
     {
@@ -1273,7 +1290,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "lib_cookie_consent_getcrashconsent",
-      "community": 24,
+      "community": 1,
       "norm_label": "getcrashconsent()"
     },
     {
@@ -1283,7 +1300,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "lib_cookie_consent_setcrashconsent",
-      "community": 24,
+      "community": 1,
       "norm_label": "setcrashconsent()"
     },
     {
@@ -1333,7 +1350,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_detect_platform",
-      "community": 12,
+      "community": 10,
       "norm_label": "detect-platform.ts"
     },
     {
@@ -1343,7 +1360,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_detect_platform_releaseassets",
-      "community": 12,
+      "community": 10,
       "norm_label": "releaseassets"
     },
     {
@@ -1353,7 +1370,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "lib_detect_platform_platformdownload",
-      "community": 12,
+      "community": 10,
       "norm_label": "platformdownload"
     },
     {
@@ -1363,7 +1380,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "lib_detect_platform_detectplatform",
-      "community": 12,
+      "community": 10,
       "norm_label": "detectplatform()"
     },
     {
@@ -1373,7 +1390,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_export",
-      "community": 1,
+      "community": 10,
       "norm_label": "export.ts"
     },
     {
@@ -1383,7 +1400,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_export_downloadtext",
-      "community": 1,
+      "community": 10,
       "norm_label": "downloadtext()"
     },
     {
@@ -1393,7 +1410,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "lib_export_downloadcanvaspng",
-      "community": 1,
+      "community": 10,
       "norm_label": "downloadcanvaspng()"
     },
     {
@@ -1453,7 +1470,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_image_compress",
-      "community": 10,
+      "community": 5,
       "norm_label": "image-compress.ts"
     },
     {
@@ -1463,7 +1480,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "lib_image_compress_quality_mime_types",
-      "community": 10,
+      "community": 5,
       "norm_label": "quality_mime_types"
     },
     {
@@ -1473,7 +1490,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "lib_image_compress_computescaleddimensions",
-      "community": 10,
+      "community": 5,
       "norm_label": "computescaleddimensions()"
     },
     {
@@ -1483,7 +1500,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "lib_image_compress_nextquality",
-      "community": 10,
+      "community": 5,
       "norm_label": "nextquality()"
     },
     {
@@ -1493,7 +1510,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "lib_image_compress_withjpegextension",
-      "community": 10,
+      "community": 5,
       "norm_label": "withjpegextension()"
     },
     {
@@ -1503,7 +1520,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "lib_image_compress_loadimage",
-      "community": 10,
+      "community": 5,
       "norm_label": "loadimage()"
     },
     {
@@ -1513,7 +1530,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "lib_image_compress_canvastoblob",
-      "community": 10,
+      "community": 5,
       "norm_label": "canvastoblob()"
     },
     {
@@ -1523,7 +1540,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "lib_image_compress_blobtofile",
-      "community": 10,
+      "community": 5,
       "norm_label": "blobtofile()"
     },
     {
@@ -1533,7 +1550,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "lib_image_compress_compressimageifneeded",
-      "community": 10,
+      "community": 5,
       "norm_label": "compressimageifneeded()"
     },
     {
@@ -1543,7 +1560,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_image_dimensions",
-      "community": 1,
+      "community": 5,
       "norm_label": "image-dimensions.ts"
     },
     {
@@ -1553,7 +1570,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "lib_image_dimensions_getimagedimensions",
-      "community": 1,
+      "community": 5,
       "norm_label": "getimagedimensions()"
     },
     {
@@ -1603,7 +1620,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_sample_image",
-      "community": 13,
+      "community": 10,
       "norm_label": "sample-image.ts"
     },
     {
@@ -1613,7 +1630,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_sample_image_drawsamplescene",
-      "community": 13,
+      "community": 10,
       "norm_label": "drawsamplescene()"
     },
     {
@@ -1623,7 +1640,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "lib_sample_image_createsampleimageblob",
-      "community": 13,
+      "community": 10,
       "norm_label": "createsampleimageblob()"
     },
     {
@@ -1633,7 +1650,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_theme",
-      "community": 1,
+      "community": 10,
       "norm_label": "theme.ts"
     },
     {
@@ -1643,7 +1660,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_theme_colors",
-      "community": 1,
+      "community": 10,
       "norm_label": "colors"
     },
     {
@@ -1663,7 +1680,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_types_outputmode",
-      "community": 1,
+      "community": 10,
       "norm_label": "outputmode"
     },
     {
@@ -1717,20 +1734,10 @@
       "norm_label": "ansiresult"
     },
     {
-      "label": "AutoParams",
-      "file_type": "code",
-      "source_file": "lib/types.ts",
-      "source_location": "L39",
-      "_origin": "ast",
-      "id": "lib_types_autoparams",
-      "community": 0,
-      "norm_label": "autoparams"
-    },
-    {
       "label": "ConvertParams",
       "file_type": "code",
       "source_file": "lib/types.ts",
-      "source_location": "L46",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "lib_types_convertparams",
       "community": 6,
@@ -1740,7 +1747,7 @@
       "label": "HealthResponse",
       "file_type": "code",
       "source_file": "lib/types.ts",
-      "source_location": "L64",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "lib_types_healthresponse",
       "community": 0,
@@ -1750,7 +1757,7 @@
       "label": "FrontendCrashPayload",
       "file_type": "code",
       "source_file": "lib/types.ts",
-      "source_location": "L70",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "lib_types_frontendcrashpayload",
       "community": 0,
@@ -1760,7 +1767,7 @@
       "label": "BackendCrashPayload",
       "file_type": "code",
       "source_file": "lib/types.ts",
-      "source_location": "L80",
+      "source_location": "L68",
       "_origin": "ast",
       "id": "lib_types_backendcrashpayload",
       "community": 0,
@@ -1770,7 +1777,7 @@
       "label": "CrashPayload",
       "file_type": "code",
       "source_file": "lib/types.ts",
-      "source_location": "L88",
+      "source_location": "L76",
       "_origin": "ast",
       "id": "lib_types_crashpayload",
       "community": 1,
@@ -1783,7 +1790,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_validate",
-      "community": 13,
+      "community": 5,
       "norm_label": "validate.ts"
     },
     {
@@ -1793,7 +1800,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "lib_validate_accepted_types",
-      "community": 13,
+      "community": 5,
       "norm_label": "accepted_types"
     },
     {
@@ -1803,7 +1810,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "lib_validate_validationresult",
-      "community": 13,
+      "community": 5,
       "norm_label": "validationresult"
     },
     {
@@ -1813,7 +1820,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "lib_validate_validateimagefile",
-      "community": 13,
+      "community": 5,
       "norm_label": "validateimagefile()"
     },
     {
@@ -1823,7 +1830,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "next_config",
-      "community": 21,
+      "community": 24,
       "norm_label": "next.config.ts"
     },
     {
@@ -1833,7 +1840,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "next_config_nextconfig",
-      "community": 21,
+      "community": 24,
       "norm_label": "nextconfig"
     },
     {
@@ -1843,7 +1850,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "package",
-      "community": 4,
+      "community": 3,
       "norm_label": "package.json"
     },
     {
@@ -1853,7 +1860,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "package_name",
-      "community": 4,
+      "community": 3,
       "norm_label": "name"
     },
     {
@@ -1863,7 +1870,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "package_version",
-      "community": 4,
+      "community": 3,
       "norm_label": "version"
     },
     {
@@ -1873,7 +1880,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "package_private",
-      "community": 4,
+      "community": 3,
       "norm_label": "private"
     },
     {
@@ -1883,7 +1890,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "package_scripts",
-      "community": 4,
+      "community": 3,
       "norm_label": "scripts"
     },
     {
@@ -1893,7 +1900,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "package_scripts_dev",
-      "community": 4,
+      "community": 3,
       "norm_label": "dev"
     },
     {
@@ -1903,7 +1910,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "package_scripts_build",
-      "community": 4,
+      "community": 3,
       "norm_label": "build"
     },
     {
@@ -1913,7 +1920,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "package_scripts_start",
-      "community": 4,
+      "community": 3,
       "norm_label": "start"
     },
     {
@@ -1923,7 +1930,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "package_scripts_lint",
-      "community": 4,
+      "community": 3,
       "norm_label": "lint"
     },
     {
@@ -1933,7 +1940,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "package_scripts_test",
-      "community": 4,
+      "community": 3,
       "norm_label": "test"
     },
     {
@@ -1943,7 +1950,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "package_dependencies",
-      "community": 4,
+      "community": 3,
       "norm_label": "dependencies"
     },
     {
@@ -1953,7 +1960,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "package_dependencies_vercel_analytics",
-      "community": 4,
+      "community": 3,
       "norm_label": "@vercel/analytics"
     },
     {
@@ -1963,7 +1970,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "package_dependencies_next",
-      "community": 4,
+      "community": 3,
       "norm_label": "next"
     },
     {
@@ -1973,7 +1980,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "package_dependencies_react",
-      "community": 4,
+      "community": 3,
       "norm_label": "react"
     },
     {
@@ -1983,7 +1990,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "package_dependencies_react_dom",
-      "community": 4,
+      "community": 3,
       "norm_label": "react-dom"
     },
     {
@@ -1993,7 +2000,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "package_devdependencies",
-      "community": 4,
+      "community": 3,
       "norm_label": "devdependencies"
     },
     {
@@ -2003,7 +2010,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss_postcss",
-      "community": 4,
+      "community": 3,
       "norm_label": "@tailwindcss/postcss"
     },
     {
@@ -2013,7 +2020,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "package_devdependencies_types_node",
-      "community": 4,
+      "community": 3,
       "norm_label": "@types/node"
     },
     {
@@ -2023,7 +2030,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "package_devdependencies_types_react",
-      "community": 4,
+      "community": 3,
       "norm_label": "@types/react"
     },
     {
@@ -2033,7 +2040,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "package_devdependencies_types_react_dom",
-      "community": 4,
+      "community": 3,
       "norm_label": "@types/react-dom"
     },
     {
@@ -2043,7 +2050,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "package_devdependencies_eslint",
-      "community": 4,
+      "community": 3,
       "norm_label": "eslint"
     },
     {
@@ -2053,7 +2060,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "package_devdependencies_eslint_config_next",
-      "community": 4,
+      "community": 3,
       "norm_label": "eslint-config-next"
     },
     {
@@ -2063,7 +2070,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "package_devdependencies_jsdom",
-      "community": 4,
+      "community": 3,
       "norm_label": "jsdom"
     },
     {
@@ -2073,7 +2080,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss",
-      "community": 4,
+      "community": 3,
       "norm_label": "tailwindcss"
     },
     {
@@ -2083,7 +2090,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "package_devdependencies_typescript",
-      "community": 4,
+      "community": 3,
       "norm_label": "typescript"
     },
     {
@@ -2093,7 +2100,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "package_devdependencies_vitest",
-      "community": 4,
+      "community": 3,
       "norm_label": "vitest"
     },
     {
@@ -2103,7 +2110,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "postcss_config",
-      "community": 22,
+      "community": 25,
       "norm_label": "postcss.config.mjs"
     },
     {
@@ -2113,7 +2120,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "postcss_config_config",
-      "community": 22,
+      "community": 25,
       "norm_label": "config"
     },
     {
@@ -2123,7 +2130,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_converters",
-      "community": 3,
+      "community": 4,
       "norm_label": "converters.py"
     },
     {
@@ -2133,7 +2140,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "server_converters_preprocess",
-      "community": 3,
+      "community": 4,
       "norm_label": "_preprocess()"
     },
     {
@@ -2143,18 +2150,18 @@
       "source_location": "",
       "_origin": "ast",
       "id": "image",
-      "community": 3,
+      "community": 4,
       "norm_label": "image"
     },
     {
-      "label": "analyze_image()",
+      "label": "convert_to_ascii_grid()",
       "file_type": "code",
       "source_file": "server/converters.py",
-      "source_location": "L36",
+      "source_location": "L35",
       "_origin": "ast",
-      "id": "server_converters_analyze_image",
-      "community": 3,
-      "norm_label": "analyze_image()"
+      "id": "server_converters_convert_to_ascii_grid",
+      "community": 4,
+      "norm_label": "convert_to_ascii_grid()"
     },
     {
       "label": "Any",
@@ -2163,27 +2170,17 @@
       "source_location": "",
       "_origin": "ast",
       "id": "server_converters_py_any",
-      "community": 3,
+      "community": 4,
       "norm_label": "any"
-    },
-    {
-      "label": "convert_to_ascii_grid()",
-      "file_type": "code",
-      "source_file": "server/converters.py",
-      "source_location": "L51",
-      "_origin": "ast",
-      "id": "server_converters_convert_to_ascii_grid",
-      "community": 3,
-      "norm_label": "convert_to_ascii_grid()"
     },
     {
       "label": "convert_to_ansi_grid()",
       "file_type": "code",
       "source_file": "server/converters.py",
-      "source_location": "L95",
+      "source_location": "L79",
       "_origin": "ast",
       "id": "server_converters_convert_to_ansi_grid",
-      "community": 3,
+      "community": 4,
       "norm_label": "convert_to_ansi_grid()"
     },
     {
@@ -2193,18 +2190,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "server_converters_rationale_19",
-      "community": 3,
+      "community": 4,
       "norm_label": "apply image2 cli's ``--invert``/``--blur`` preprocessing.      mirrors ``image2."
-    },
-    {
-      "label": "Derive default contrast/brightness/saturate/min_lum for an image.      Mirrors i",
-      "file_type": "rationale",
-      "source_file": "server/converters.py",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "server_converters_rationale_37",
-      "community": 3,
-      "norm_label": "derive default contrast/brightness/saturate/min_lum for an image.      mirrors i"
     },
     {
       "label": "main.py",
@@ -2213,7 +2200,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_main",
-      "community": 11,
+      "community": 12,
       "norm_label": "main.py"
     },
     {
@@ -2223,7 +2210,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "server_main_rate_limit_handler",
-      "community": 11,
+      "community": 12,
       "norm_label": "_rate_limit_handler()"
     },
     {
@@ -2233,7 +2220,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "request",
-      "community": 11,
+      "community": 12,
       "norm_label": "request"
     },
     {
@@ -2243,7 +2230,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "ratelimitexceeded",
-      "community": 11,
+      "community": 12,
       "norm_label": "ratelimitexceeded"
     },
     {
@@ -2253,7 +2240,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "jsonresponse",
-      "community": 11,
+      "community": 12,
       "norm_label": "jsonresponse"
     },
     {
@@ -2263,7 +2250,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "server_main_health",
-      "community": 11,
+      "community": 12,
       "norm_label": "health()"
     },
     {
@@ -2273,7 +2260,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "server_main_py_any",
-      "community": 11,
+      "community": 12,
       "norm_label": "any"
     },
     {
@@ -2283,7 +2270,7 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "server_main_upload",
-      "community": 11,
+      "community": 12,
       "norm_label": "upload()"
     },
     {
@@ -2293,7 +2280,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "uploadfile",
-      "community": 11,
+      "community": 12,
       "norm_label": "uploadfile"
     },
     {
@@ -2303,7 +2290,7 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "server_main_get_session",
-      "community": 11,
+      "community": 12,
       "norm_label": "get_session()"
     },
     {
@@ -2313,7 +2300,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fileresponse",
-      "community": 11,
+      "community": 12,
       "norm_label": "fileresponse"
     },
     {
@@ -2323,7 +2310,7 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "server_main_save_upload",
-      "community": 11,
+      "community": 12,
       "norm_label": "_save_upload()"
     },
     {
@@ -2333,7 +2320,7 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "server_main_estimate_rows",
-      "community": 11,
+      "community": 12,
       "norm_label": "_estimate_rows()"
     },
     {
@@ -2343,37 +2330,27 @@
       "source_location": "L128",
       "_origin": "ast",
       "id": "server_main_validate_output_size",
-      "community": 11,
+      "community": 12,
       "norm_label": "_validate_output_size()"
-    },
-    {
-      "label": "analyze()",
-      "file_type": "code",
-      "source_file": "server/main.py",
-      "source_location": "L164",
-      "_origin": "ast",
-      "id": "server_main_analyze",
-      "community": 11,
-      "norm_label": "analyze()"
     },
     {
       "label": "convert_ascii()",
       "file_type": "code",
       "source_file": "server/main.py",
-      "source_location": "L181",
+      "source_location": "L164",
       "_origin": "ast",
       "id": "server_main_convert_ascii",
-      "community": 11,
+      "community": 12,
       "norm_label": "convert_ascii()"
     },
     {
       "label": "convert_ansi()",
       "file_type": "code",
       "source_file": "server/main.py",
-      "source_location": "L226",
+      "source_location": "L209",
       "_origin": "ast",
       "id": "server_main_convert_ansi",
-      "community": 11,
+      "community": 12,
       "norm_label": "convert_ansi()"
     },
     {
@@ -2383,7 +2360,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_tests_init",
-      "community": 33,
+      "community": 38,
       "norm_label": "__init__.py"
     },
     {
@@ -2393,7 +2370,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_tests_test_converters",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_converters.py"
     },
     {
@@ -2403,7 +2380,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "server_tests_test_converters_sample_image_path",
-      "community": 3,
+      "community": 4,
       "norm_label": "sample_image_path()"
     },
     {
@@ -2413,7 +2390,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "path",
-      "community": 3,
+      "community": 4,
       "norm_label": "path"
     },
     {
@@ -2423,7 +2400,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "server_tests_test_converters_test_ascii_grid_dimensions_and_chars",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_ascii_grid_dimensions_and_chars()"
     },
     {
@@ -2433,7 +2410,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "server_tests_test_converters_test_ascii_text_matches_cells",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_ascii_text_matches_cells()"
     },
     {
@@ -2443,7 +2420,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "server_tests_test_converters_test_ansi_grid_matches_real_image_to_ansi",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_ansi_grid_matches_real_image_to_ansi()"
     },
     {
@@ -2453,7 +2430,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "server_tests_test_converters_test_ansi_grid_palette_changes_ansi_text_only",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_ansi_grid_palette_changes_ansi_text_only()"
     },
     {
@@ -2463,7 +2440,7 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "server_tests_test_converters_test_ascii_grid_img_height_overrides_aspect",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_ascii_grid_img_height_overrides_aspect()"
     },
     {
@@ -2473,7 +2450,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "server_tests_test_converters_test_ascii_grid_img_height_uses_resampling_enum_without_image_lanczos",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_ascii_grid_img_height_uses_resampling_enum_without_image_lanczos()"
     },
     {
@@ -2483,7 +2460,7 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "server_tests_test_converters_test_ascii_grid_min_lum_lifts_dark_pixels",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_ascii_grid_min_lum_lifts_dark_pixels()"
     },
     {
@@ -2493,97 +2470,77 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "server_tests_test_converters_test_ansi_grid_min_lum_changes_output",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_ansi_grid_min_lum_changes_output()"
-    },
-    {
-      "label": "test_analyze_image_returns_auto_params()",
-      "file_type": "code",
-      "source_file": "server/tests/test_converters.py",
-      "source_location": "L139",
-      "_origin": "ast",
-      "id": "server_tests_test_converters_test_analyze_image_returns_auto_params",
-      "community": 3,
-      "norm_label": "test_analyze_image_returns_auto_params()"
     },
     {
       "label": "test_ascii_grid_invert_changes_pixels()",
       "file_type": "code",
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L149",
+      "source_location": "L139",
       "_origin": "ast",
       "id": "server_tests_test_converters_test_ascii_grid_invert_changes_pixels",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_ascii_grid_invert_changes_pixels()"
     },
     {
       "label": "test_ascii_grid_blur_changes_pixels()",
       "file_type": "code",
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L157",
+      "source_location": "L147",
       "_origin": "ast",
       "id": "server_tests_test_converters_test_ascii_grid_blur_changes_pixels",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_ascii_grid_blur_changes_pixels()"
     },
     {
       "label": "test_ansi_grid_invert_changes_output()",
       "file_type": "code",
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L165",
+      "source_location": "L155",
       "_origin": "ast",
       "id": "server_tests_test_converters_test_ansi_grid_invert_changes_output",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_ansi_grid_invert_changes_output()"
     },
     {
       "label": "test_ansi_grid_blur_changes_output()",
       "file_type": "code",
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L178",
+      "source_location": "L168",
       "_origin": "ast",
       "id": "server_tests_test_converters_test_ansi_grid_blur_changes_output",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_ansi_grid_blur_changes_output()"
-    },
-    {
-      "label": "test_analyze_image_invert_changes_params()",
-      "file_type": "code",
-      "source_file": "server/tests/test_converters.py",
-      "source_location": "L190",
-      "_origin": "ast",
-      "id": "server_tests_test_converters_test_analyze_image_invert_changes_params",
-      "community": 3,
-      "norm_label": "test_analyze_image_invert_changes_params()"
     },
     {
       "label": "test_preprocess_handles_rgba_invert()",
       "file_type": "code",
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L198",
+      "source_location": "L180",
       "_origin": "ast",
       "id": "server_tests_test_converters_test_preprocess_handles_rgba_invert",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_preprocess_handles_rgba_invert()"
     },
     {
       "label": "test_ascii_grid_sharpness_and_saturate_accepted()",
       "file_type": "code",
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L211",
+      "source_location": "L193",
       "_origin": "ast",
       "id": "server_tests_test_converters_test_ascii_grid_sharpness_and_saturate_accepted",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_ascii_grid_sharpness_and_saturate_accepted()"
     },
     {
       "label": "ImageOps.invert errors on non-RGB modes; _preprocess must convert RGBA     (a co",
       "file_type": "rationale",
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L199",
+      "source_location": "L181",
       "_origin": "ast",
-      "id": "server_tests_test_converters_rationale_199",
-      "community": 3,
+      "id": "server_tests_test_converters_rationale_181",
+      "community": 4,
       "norm_label": "imageops.invert errors on non-rgb modes; _preprocess must convert rgba     (a co"
     },
     {
@@ -2593,7 +2550,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_tests_test_main",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_main.py"
     },
     {
@@ -2603,7 +2560,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "server_tests_test_main_local_client",
-      "community": 7,
+      "community": 9,
       "norm_label": "local_client()"
     },
     {
@@ -2613,7 +2570,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "server_tests_test_main_test_health",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_health()"
     },
     {
@@ -2623,177 +2580,147 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "server_tests_test_main_sample_png_bytes",
-      "community": 7,
+      "community": 9,
       "norm_label": "_sample_png_bytes()"
-    },
-    {
-      "label": "test_analyze_returns_auto_params()",
-      "file_type": "code",
-      "source_file": "server/tests/test_main.py",
-      "source_location": "L42",
-      "_origin": "ast",
-      "id": "server_tests_test_main_test_analyze_returns_auto_params",
-      "community": 7,
-      "norm_label": "test_analyze_returns_auto_params()"
-    },
-    {
-      "label": "test_analyze_rejects_bad_image()",
-      "file_type": "code",
-      "source_file": "server/tests/test_main.py",
-      "source_location": "L52",
-      "_origin": "ast",
-      "id": "server_tests_test_main_test_analyze_rejects_bad_image",
-      "community": 7,
-      "norm_label": "test_analyze_rejects_bad_image()"
     },
     {
       "label": "test_convert_ascii_returns_grid()",
       "file_type": "code",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L60",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "server_tests_test_main_test_convert_ascii_returns_grid",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_convert_ascii_returns_grid()"
     },
     {
       "label": "test_convert_ansi_returns_grid_and_text()",
       "file_type": "code",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L72",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "server_tests_test_main_test_convert_ansi_returns_grid_and_text",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_convert_ansi_returns_grid_and_text()"
     },
     {
       "label": "test_convert_ascii_invert_and_blur_change_output()",
       "file_type": "code",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L85",
+      "source_location": "L67",
       "_origin": "ast",
       "id": "server_tests_test_main_test_convert_ascii_invert_and_blur_change_output",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_convert_ascii_invert_and_blur_change_output()"
-    },
-    {
-      "label": "test_analyze_accepts_invert_and_blur()",
-      "file_type": "code",
-      "source_file": "server/tests/test_main.py",
-      "source_location": "L100",
-      "_origin": "ast",
-      "id": "server_tests_test_main_test_analyze_accepts_invert_and_blur",
-      "community": 7,
-      "norm_label": "test_analyze_accepts_invert_and_blur()"
     },
     {
       "label": "test_convert_ascii_rejects_bad_image()",
       "file_type": "code",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L111",
+      "source_location": "L82",
       "_origin": "ast",
       "id": "server_tests_test_main_test_convert_ascii_rejects_bad_image",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_convert_ascii_rejects_bad_image()"
     },
     {
       "label": "test_convert_ansi_rejects_bad_palette()",
       "file_type": "code",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L120",
+      "source_location": "L91",
       "_origin": "ast",
       "id": "server_tests_test_main_test_convert_ansi_rejects_bad_palette",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_convert_ansi_rejects_bad_palette()"
     },
     {
       "label": "test_convert_ascii_rejects_oversized_output()",
       "file_type": "code",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L129",
+      "source_location": "L100",
       "_origin": "ast",
       "id": "server_tests_test_main_test_convert_ascii_rejects_oversized_output",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_convert_ascii_rejects_oversized_output()"
     },
     {
       "label": "test_convert_ansi_rejects_oversized_output()",
       "file_type": "code",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L144",
+      "source_location": "L115",
       "_origin": "ast",
       "id": "server_tests_test_main_test_convert_ansi_rejects_oversized_output",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_convert_ansi_rejects_oversized_output()"
     },
     {
       "label": "test_health_returns_local_false_by_default()",
       "file_type": "code",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L164",
+      "source_location": "L135",
       "_origin": "ast",
       "id": "server_tests_test_main_test_health_returns_local_false_by_default",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_health_returns_local_false_by_default()"
     },
     {
       "label": "test_health_returns_local_true_when_env_set()",
       "file_type": "code",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L170",
+      "source_location": "L141",
       "_origin": "ast",
       "id": "server_tests_test_main_test_health_returns_local_true_when_env_set",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_health_returns_local_true_when_env_set()"
     },
     {
       "label": "test_upload_returns_session_id()",
       "file_type": "code",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L179",
+      "source_location": "L150",
       "_origin": "ast",
       "id": "server_tests_test_main_test_upload_returns_session_id",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_upload_returns_session_id()"
     },
     {
       "label": "test_session_returns_uploaded_file()",
       "file_type": "code",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L190",
+      "source_location": "L161",
       "_origin": "ast",
       "id": "server_tests_test_main_test_session_returns_uploaded_file",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_session_returns_uploaded_file()"
     },
     {
       "label": "test_session_404_for_unknown_id()",
       "file_type": "code",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L202",
+      "source_location": "L173",
       "_origin": "ast",
       "id": "server_tests_test_main_test_session_404_for_unknown_id",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_session_404_for_unknown_id()"
     },
     {
       "label": "test_validate_output_size_skipped_when_local()",
       "file_type": "code",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L207",
+      "source_location": "L178",
       "_origin": "ast",
       "id": "server_tests_test_main_test_validate_output_size_skipped_when_local",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_validate_output_size_skipped_when_local()"
     },
     {
       "label": "test_validate_output_size_enforced_when_not_local()",
       "file_type": "code",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L214",
+      "source_location": "L185",
       "_origin": "ast",
       "id": "server_tests_test_main_test_validate_output_size_enforced_when_not_local",
-      "community": 7,
+      "community": 9,
       "norm_label": "test_validate_output_size_enforced_when_not_local()"
     },
     {
@@ -2803,7 +2730,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_aspect_ratio_test",
-      "community": 2,
+      "community": 11,
       "norm_label": "aspect-ratio.test.ts"
     },
     {
@@ -2893,7 +2820,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_cookie_consent_test",
-      "community": 24,
+      "community": 1,
       "norm_label": "cookie-consent.test.ts"
     },
     {
@@ -2923,7 +2850,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_detect_platform_test",
-      "community": 12,
+      "community": 10,
       "norm_label": "detect-platform.test.ts"
     },
     {
@@ -2933,7 +2860,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "tests_detect_platform_test_mock",
-      "community": 12,
+      "community": 10,
       "norm_label": "mock"
     },
     {
@@ -2963,7 +2890,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_image_compress_test",
-      "community": 10,
+      "community": 5,
       "norm_label": "image-compress.test.ts"
     },
     {
@@ -2973,7 +2900,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_image_compress_test_sizefn",
-      "community": 10,
+      "community": 5,
       "norm_label": "sizefn"
     },
     {
@@ -2983,7 +2910,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "tests_image_compress_test_mockcanvas",
-      "community": 10,
+      "community": 5,
       "norm_label": "mockcanvas"
     },
     {
@@ -2993,7 +2920,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "tests_image_compress_test_mockcanvas_constructor",
-      "community": 10,
+      "community": 5,
       "norm_label": ".constructor()"
     },
     {
@@ -3003,7 +2930,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "tests_image_compress_test_mockcanvas_getcontext",
-      "community": 10,
+      "community": 5,
       "norm_label": ".getcontext()"
     },
     {
@@ -3013,7 +2940,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "tests_image_compress_test_mockcanvas_toblob",
-      "community": 10,
+      "community": 5,
       "norm_label": ".toblob()"
     },
     {
@@ -3023,7 +2950,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "tests_image_compress_test_stubcanvas",
-      "community": 10,
+      "community": 5,
       "norm_label": "stubcanvas()"
     },
     {
@@ -3033,7 +2960,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "tests_image_compress_test_stubimage",
-      "community": 3,
+      "community": 5,
       "norm_label": "stubimage()"
     },
     {
@@ -3043,7 +2970,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "tests_image_compress_test_bigfile",
-      "community": 10,
+      "community": 5,
       "norm_label": "bigfile()"
     },
     {
@@ -3053,7 +2980,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_image_dimensions_test",
-      "community": 1,
+      "community": 5,
       "norm_label": "image-dimensions.test.ts"
     },
     {
@@ -3063,7 +2990,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "tests_image_dimensions_test_mockimage",
-      "community": 3,
+      "community": 5,
       "norm_label": "mockimage"
     },
     {
@@ -3073,7 +3000,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tests_image_dimensions_test_mockimage_src",
-      "community": 3,
+      "community": 4,
       "norm_label": ".src()"
     },
     {
@@ -3103,7 +3030,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_sample_image_test",
-      "community": 13,
+      "community": 10,
       "norm_label": "sample-image.test.ts"
     },
     {
@@ -3113,7 +3040,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "tests_sample_image_test_makectx",
-      "community": 13,
+      "community": 10,
       "norm_label": "makectx()"
     },
     {
@@ -3123,7 +3050,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_validate_test",
-      "community": 13,
+      "community": 5,
       "norm_label": "validate.test.ts"
     },
     {
@@ -3133,7 +3060,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "tests_validate_test_makefile",
-      "community": 13,
+      "community": 5,
       "norm_label": "makefile()"
     },
     {
@@ -3143,7 +3070,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tsconfig",
-      "community": 9,
+      "community": 8,
       "norm_label": "tsconfig.json"
     },
     {
@@ -3153,7 +3080,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "tsconfig_compileroptions",
-      "community": 9,
+      "community": 8,
       "norm_label": "compileroptions"
     },
     {
@@ -3163,7 +3090,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "tsconfig_compileroptions_target",
-      "community": 9,
+      "community": 8,
       "norm_label": "target"
     },
     {
@@ -3173,7 +3100,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "tsconfig_compileroptions_lib",
-      "community": 9,
+      "community": 8,
       "norm_label": "lib"
     },
     {
@@ -3183,7 +3110,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "tsconfig_compileroptions_allowjs",
-      "community": 9,
+      "community": 8,
       "norm_label": "allowjs"
     },
     {
@@ -3193,7 +3120,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "tsconfig_compileroptions_skiplibcheck",
-      "community": 9,
+      "community": 8,
       "norm_label": "skiplibcheck"
     },
     {
@@ -3203,7 +3130,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "tsconfig_compileroptions_strict",
-      "community": 9,
+      "community": 8,
       "norm_label": "strict"
     },
     {
@@ -3213,7 +3140,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "tsconfig_compileroptions_noemit",
-      "community": 9,
+      "community": 8,
       "norm_label": "noemit"
     },
     {
@@ -3223,7 +3150,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "tsconfig_compileroptions_esmoduleinterop",
-      "community": 9,
+      "community": 8,
       "norm_label": "esmoduleinterop"
     },
     {
@@ -3233,7 +3160,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "tsconfig_compileroptions_module",
-      "community": 9,
+      "community": 8,
       "norm_label": "module"
     },
     {
@@ -3243,7 +3170,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tsconfig_compileroptions_moduleresolution",
-      "community": 9,
+      "community": 8,
       "norm_label": "moduleresolution"
     },
     {
@@ -3253,7 +3180,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "tsconfig_compileroptions_resolvejsonmodule",
-      "community": 9,
+      "community": 8,
       "norm_label": "resolvejsonmodule"
     },
     {
@@ -3263,7 +3190,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "tsconfig_compileroptions_isolatedmodules",
-      "community": 9,
+      "community": 8,
       "norm_label": "isolatedmodules"
     },
     {
@@ -3273,7 +3200,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "tsconfig_compileroptions_jsx",
-      "community": 9,
+      "community": 8,
       "norm_label": "jsx"
     },
     {
@@ -3283,7 +3210,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "tsconfig_compileroptions_incremental",
-      "community": 9,
+      "community": 8,
       "norm_label": "incremental"
     },
     {
@@ -3293,7 +3220,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tsconfig_compileroptions_plugins",
-      "community": 9,
+      "community": 8,
       "norm_label": "plugins"
     },
     {
@@ -3303,7 +3230,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "tsconfig_compileroptions_paths",
-      "community": 9,
+      "community": 8,
       "norm_label": "paths"
     },
     {
@@ -3313,7 +3240,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "tsconfig_paths",
-      "community": 9,
+      "community": 8,
       "norm_label": "@/*"
     },
     {
@@ -3323,7 +3250,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "tsconfig_include",
-      "community": 9,
+      "community": 8,
       "norm_label": "include"
     },
     {
@@ -3333,7 +3260,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "tsconfig_exclude",
-      "community": 9,
+      "community": 8,
       "norm_label": "exclude"
     },
     {
@@ -3343,7 +3270,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "vitest_config",
-      "community": 34,
+      "community": 39,
       "norm_label": "vitest.config.ts"
     },
     {
@@ -3353,7 +3280,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agents",
-      "community": 18,
+      "community": 21,
       "norm_label": "agents.md"
     },
     {
@@ -3363,7 +3290,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "agents_this_is_not_the_next_js_you_know",
-      "community": 18,
+      "community": 21,
       "norm_label": "this is not the next.js you know"
     },
     {
@@ -3373,7 +3300,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "claude",
-      "community": 16,
+      "community": 14,
       "norm_label": "claude.md"
     },
     {
@@ -3383,7 +3310,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "claude_rules",
-      "community": 16,
+      "community": 14,
       "norm_label": "rules"
     },
     {
@@ -3393,7 +3320,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "claude_commands",
-      "community": 16,
+      "community": 14,
       "norm_label": "commands"
     },
     {
@@ -3403,7 +3330,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "claude_architecture",
-      "community": 16,
+      "community": 14,
       "norm_label": "architecture"
     },
     {
@@ -3413,7 +3340,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "claude_environment",
-      "community": 16,
+      "community": 14,
       "norm_label": "environment"
     },
     {
@@ -3423,7 +3350,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "claude_gotchas",
-      "community": 16,
+      "community": 14,
       "norm_label": "gotchas"
     },
     {
@@ -3433,7 +3360,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "claude_graphify",
-      "community": 16,
+      "community": 14,
       "norm_label": "graphify"
     },
     {
@@ -3443,7 +3370,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "readme",
-      "community": 5,
+      "community": 2,
       "norm_label": "readme.md"
     },
     {
@@ -3453,7 +3380,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "readme_image2_web",
-      "community": 5,
+      "community": 2,
       "norm_label": "image2-web"
     },
     {
@@ -3463,7 +3390,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "readme_examples",
-      "community": 5,
+      "community": 2,
       "norm_label": "examples"
     },
     {
@@ -3473,7 +3400,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "readme_getting_started",
-      "community": 5,
+      "community": 2,
       "norm_label": "getting started"
     },
     {
@@ -3483,7 +3410,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "readme_build_deploy_versions",
-      "community": 5,
+      "community": 2,
       "norm_label": "build/deploy versions"
     },
     {
@@ -3493,7 +3420,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "readme_project_structure",
-      "community": 5,
+      "community": 2,
       "norm_label": "project structure"
     },
     {
@@ -3503,7 +3430,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "readme_scripts",
-      "community": 5,
+      "community": 2,
       "norm_label": "scripts"
     },
     {
@@ -3513,7 +3440,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "readme_running_locally_via_docker",
-      "community": 5,
+      "community": 2,
       "norm_label": "running locally via docker"
     },
     {
@@ -3523,7 +3450,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "readme_manual_docker_compose",
-      "community": 5,
+      "community": 2,
       "norm_label": "manual docker compose"
     },
     {
@@ -3533,7 +3460,7 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "readme_session_pre_seed_url_params",
-      "community": 5,
+      "community": 2,
       "norm_label": "session pre-seed url params"
     },
     {
@@ -3543,7 +3470,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "readme_deployment",
-      "community": 5,
+      "community": 2,
       "norm_label": "deployment"
     },
     {
@@ -3553,7 +3480,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_server_deploy",
-      "community": 5,
+      "community": 2,
       "norm_label": "server-deploy.md"
     },
     {
@@ -3563,7 +3490,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_server_deploy_server_deployment",
-      "community": 5,
+      "community": 2,
       "norm_label": "server deployment"
     },
     {
@@ -3573,7 +3500,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "docs_server_deploy_build_run",
-      "community": 5,
+      "community": 2,
       "norm_label": "build & run"
     },
     {
@@ -3583,7 +3510,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "docs_server_deploy_deploying",
-      "community": 5,
+      "community": 2,
       "norm_label": "deploying"
     },
     {
@@ -3593,7 +3520,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "docs_server_deploy_version_reporting",
-      "community": 5,
+      "community": 2,
       "norm_label": "version reporting"
     },
     {
@@ -3603,7 +3530,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "docs_server_deploy_logging",
-      "community": 5,
+      "community": 2,
       "norm_label": "logging"
     },
     {
@@ -3613,7 +3540,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "docs_server_deploy_wiring_up_the_next_js_app",
-      "community": 5,
+      "community": 2,
       "norm_label": "wiring up the next.js app"
     },
     {
@@ -3623,7 +3550,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_claude",
-      "community": 5,
+      "community": 2,
       "norm_label": "claude.md"
     },
     {
@@ -3633,7 +3560,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_claude_commands",
-      "community": 5,
+      "community": 2,
       "norm_label": "commands"
     },
     {
@@ -3643,7 +3570,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "server_claude_key_files",
-      "community": 5,
+      "community": 2,
       "norm_label": "key files"
     },
     {
@@ -3653,7 +3580,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "server_claude_architecture_decisions",
-      "community": 5,
+      "community": 2,
       "norm_label": "architecture decisions"
     },
     {
@@ -3663,7 +3590,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "server_claude_versioning_version_file",
-      "community": 5,
+      "community": 2,
       "norm_label": "versioning (`version` file)"
     },
     {
@@ -3673,7 +3600,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "server_claude_runtime_gotchas",
-      "community": 5,
+      "community": 2,
       "norm_label": "runtime gotchas"
     },
     {
@@ -3685,7 +3612,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 2,
       "norm_label": "codeql advanced workflow",
       "id": "github_workflows_codeql_codeql_advanced"
     },
@@ -3698,7 +3625,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 2,
       "norm_label": "deploy to fly.io workflow",
       "id": "github_workflows_deploy_deploy_to_fly_io"
     },
@@ -3711,7 +3638,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 2,
       "norm_label": "gate job (wait for required workflows)",
       "id": "github_workflows_deploy_gate_job"
     },
@@ -3724,7 +3651,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 2,
       "norm_label": "test job (pytest server)",
       "id": "github_workflows_deploy_test_job"
     },
@@ -3737,7 +3664,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 2,
       "norm_label": "deploy dev to railway job",
       "id": "github_workflows_deploy_deploy_dev_railway"
     },
@@ -3750,7 +3677,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 2,
       "norm_label": "deploy prod to fly.io job",
       "id": "github_workflows_deploy_deploy_prod_flyio"
     },
@@ -3763,7 +3690,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 2,
       "norm_label": "docker image ci workflow",
       "id": "github_workflows_docker_image_docker_image_ci"
     },
@@ -3776,7 +3703,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 17,
+      "community": 19,
       "norm_label": "gate: changes on server job",
       "id": "github_workflows_docker_image_gate_server"
     },
@@ -3789,7 +3716,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 17,
+      "community": 19,
       "norm_label": "build and push dev (server) job",
       "id": "github_workflows_docker_image_build_push_dev"
     },
@@ -3802,7 +3729,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 17,
+      "community": 19,
       "norm_label": "build and push prod (server) job",
       "id": "github_workflows_docker_image_build_push_prod"
     },
@@ -3815,7 +3742,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 25,
+      "community": 15,
       "norm_label": "gate: changes on frontend job",
       "id": "github_workflows_docker_image_gate_web"
     },
@@ -3828,7 +3755,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 25,
+      "community": 15,
       "norm_label": "build and push web dev job",
       "id": "github_workflows_docker_image_build_push_web_dev"
     },
@@ -3841,7 +3768,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 25,
+      "community": 15,
       "norm_label": "build and push web prod job",
       "id": "github_workflows_docker_image_build_push_web_prod"
     },
@@ -3854,7 +3781,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 16,
+      "community": 14,
       "norm_label": "graphify freshness check workflow",
       "id": "github_workflows_graphify_freshness_freshnesscheck"
     },
@@ -3867,7 +3794,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 16,
+      "community": 14,
       "norm_label": "graph freshness gate policy",
       "id": "github_workflows_graphify_freshness_gatepolicy"
     },
@@ -3881,7 +3808,7 @@
       "author": null,
       "contributor": null,
       "rationale": "This Next.js version has breaking API/convention/file-structure changes from training data; agents must read node_modules/next/dist/docs/ before writing code and heed deprecation notices.",
-      "community": 35,
+      "community": 26,
       "norm_label": "next.js breaking changes warning",
       "id": "agents_nextjs_breaking_changes"
     },
@@ -3894,7 +3821,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 25,
+      "community": 15,
       "norm_label": "image2 cli tool",
       "id": "readme_image2_cli"
     },
@@ -3908,7 +3835,7 @@
       "author": null,
       "contributor": null,
       "rationale": "When run locally via img2 ui/docker compose, per-IP rate limiting is disabled and output size caps are lifted since there's no shared public resource to protect.",
-      "community": 25,
+      "community": 15,
       "norm_label": "local mode (docker/img2 ui)",
       "id": "readme_local_mode"
     },
@@ -3921,7 +3848,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 25,
+      "community": 15,
       "norm_label": "vercel frontend deployment",
       "id": "readme_vercel_deployment"
     },
@@ -3934,7 +3861,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 36,
+      "community": 27,
       "norm_label": "cors allowlist (server/main.py)",
       "id": "docs_server_deploy_cors_allowlist"
     },
@@ -3948,7 +3875,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Browser calls the FastAPI server directly (lib/convert.ts) instead of proxying through Next.js API routes, avoiding Vercel Functions' 4.5MB request body limit that caused 413 errors on larger images when uploads were proxied through /api/analyze and /api/convert.",
-      "community": 37,
+      "community": 28,
       "norm_label": "direct browser-to-server upload",
       "id": "docs_server_deploy_direct_browser_upload"
     },
@@ -3961,7 +3888,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 26,
+      "community": 29,
       "norm_label": "pnpm-workspace.yaml",
       "id": "pnpm_workspace"
     },
@@ -3975,7 +3902,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Server deploys independently from frontend (Railway/Docker), so VERSION carries its own semver bumped per PR to signal behavior changes and confirm deploys shipped; docs/CI-only changes don't bump it, and the bump must land in the same commit as the code change to keep the two systems' versions traceable to actual behavior differences.",
-      "community": 39,
+      "community": 34,
       "norm_label": "server/version semver policy",
       "id": "server_claude_version_semver"
     },
@@ -3988,7 +3915,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 38,
+      "community": 33,
       "norm_label": "per-ip rate limiting (slowapi)",
       "id": "server_claude_rate_limiting"
     },
@@ -4001,7 +3928,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 23,
+      "community": 35,
       "norm_label": "server/requirements-dev.txt dependency list",
       "id": "server_requirements_dev_deps"
     },
@@ -4014,7 +3941,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 31,
+      "community": 37,
       "norm_label": "pytest (test runner)",
       "id": "server_requirements_dev_pytest"
     },
@@ -4027,61 +3954,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 30,
+      "community": 36,
       "norm_label": "flake8 (linter)",
       "id": "server_requirements_dev_flake8"
-    },
-    {
-      "label": "server/requirements.txt dependency list",
-      "file_type": "document",
-      "source_file": "server/requirements.txt",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 23,
-      "norm_label": "server/requirements.txt dependency list",
-      "id": "server_requirements_deps"
-    },
-    {
-      "label": "FastAPI (server web framework)",
-      "file_type": "code",
-      "source_file": "server/requirements.txt",
-      "source_location": "fastapi==0.139.0",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 15,
-      "norm_label": "fastapi (server web framework)",
-      "id": "server_requirements_fastapi"
-    },
-    {
-      "label": "image2 (GitHub-sourced conversion dependency)",
-      "file_type": "code",
-      "source_file": "server/requirements.txt",
-      "source_location": "image2 @ git+https://github.com/c0dezer019/image2.git",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 40,
-      "norm_label": "image2 (github-sourced conversion dependency)",
-      "id": "server_requirements_image2"
-    },
-    {
-      "label": "pillow (image processing library)",
-      "file_type": "code",
-      "source_file": "server/requirements.txt",
-      "source_location": "pillow==12.2.0",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 32,
-      "norm_label": "pillow (image processing library)",
-      "id": "server_requirements_pillow"
     },
     {
       "label": "file.svg icon",
@@ -4092,7 +3967,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 27,
+      "community": 30,
       "norm_label": "file.svg icon",
       "id": "public_file_svg"
     },
@@ -4105,7 +3980,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 28,
+      "community": 31,
       "norm_label": "globe.svg icon",
       "id": "public_globe_svg"
     },
@@ -4118,7 +3993,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 25,
+      "community": 15,
       "norm_label": "next.svg (next.js wordmark logo)",
       "id": "public_next_svg"
     },
@@ -4131,7 +4006,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 25,
+      "community": 15,
       "norm_label": "vercel.svg (vercel triangle logo)",
       "id": "public_vercel_svg"
     },
@@ -4144,9 +4019,113 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 29,
+      "community": 32,
       "norm_label": "window.svg icon",
       "id": "public_window_svg"
+    },
+    {
+      "label": "server/requirements.txt",
+      "file_type": "document",
+      "source_file": "server/requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 16,
+      "norm_label": "server/requirements.txt",
+      "id": "server_requirements_txt"
+    },
+    {
+      "label": "fastapi",
+      "file_type": "code",
+      "source_file": "server/requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 16,
+      "norm_label": "fastapi",
+      "id": "server_fastapi"
+    },
+    {
+      "label": "uvicorn",
+      "file_type": "code",
+      "source_file": "server/requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 16,
+      "norm_label": "uvicorn",
+      "id": "server_uvicorn"
+    },
+    {
+      "label": "image2",
+      "file_type": "code",
+      "source_file": "server/requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 16,
+      "norm_label": "image2",
+      "id": "server_image2"
+    },
+    {
+      "label": "slowapi",
+      "file_type": "code",
+      "source_file": "server/requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 16,
+      "norm_label": "slowapi",
+      "id": "server_slowapi"
+    },
+    {
+      "label": "CairoSVG",
+      "file_type": "code",
+      "source_file": "server/requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 16,
+      "norm_label": "cairosvg",
+      "id": "server_cairosvg"
+    },
+    {
+      "label": "pillow",
+      "file_type": "code",
+      "source_file": "server/requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 16,
+      "norm_label": "pillow",
+      "id": "server_pillow"
+    },
+    {
+      "label": "pydantic",
+      "file_type": "code",
+      "source_file": "server/requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 16,
+      "norm_label": "pydantic",
+      "id": "server_pydantic"
     }
   ],
   "links": [
@@ -4861,7 +4840,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/page.tsx",
-      "source_location": "L26",
+      "source_location": "L24",
       "weight": 1.0,
       "source": "app_page",
       "target": "app_page_fixed_enhance_defaults",
@@ -4871,7 +4850,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/page.tsx",
-      "source_location": "L33",
+      "source_location": "L31",
       "weight": 1.0,
       "source": "app_page",
       "target": "app_page_home",
@@ -5142,17 +5121,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "app/page.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "app_page",
-      "target": "lib_convert_getautoparams",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -5378,7 +5346,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L222",
+      "source_location": "L184",
       "weight": 1.0,
       "source": "app_page_home",
       "target": "lib_aspect_ratio_heightforwidth"
@@ -5389,7 +5357,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L231",
+      "source_location": "L193",
       "weight": 1.0,
       "source": "app_page_home",
       "target": "lib_aspect_ratio_widthforheight"
@@ -5400,7 +5368,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L130",
+      "source_location": "L125",
       "weight": 1.0,
       "source": "app_page_home",
       "target": "lib_canvas_render_drawansigrid"
@@ -5411,7 +5379,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L128",
+      "source_location": "L123",
       "weight": 1.0,
       "source": "app_page_home",
       "target": "lib_canvas_render_drawasciigrid"
@@ -5422,7 +5390,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L93",
+      "source_location": "L88",
       "weight": 1.0,
       "source": "app_page_home",
       "target": "lib_convert_convertimage"
@@ -5433,7 +5401,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L127",
+      "source_location": "L122",
       "weight": 1.0,
       "source": "app_page_home",
       "target": "lib_convert_effectivefontsize"
@@ -5444,18 +5412,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L139",
-      "weight": 1.0,
-      "source": "app_page_home",
-      "target": "lib_convert_getautoparams"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/page.tsx",
-      "source_location": "L106",
+      "source_location": "L101",
       "weight": 1.0,
       "source": "app_page_home",
       "target": "lib_crash_reporter_buildbackendpayload"
@@ -5466,7 +5423,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L107",
+      "source_location": "L102",
       "weight": 1.0,
       "source": "app_page_home",
       "target": "lib_crash_reporter_reportcrash"
@@ -5477,7 +5434,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L180",
+      "source_location": "L159",
       "weight": 1.0,
       "source": "app_page_home",
       "target": "lib_image_compress_compressimageifneeded"
@@ -5488,7 +5445,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L163",
+      "source_location": "L142",
       "weight": 1.0,
       "source": "app_page_home",
       "target": "lib_image_dimensions_getimagedimensions"
@@ -5499,7 +5456,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L97",
+      "source_location": "L92",
       "weight": 1.0,
       "source": "app_page_home",
       "target": "lib_job_state_savelastjobstate"
@@ -5691,7 +5648,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L212",
+      "source_location": "L208",
       "weight": 1.0,
       "source": "components_controlsbar",
       "target": "components_controlsbar_bginput",
@@ -5701,7 +5658,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L193",
+      "source_location": "L189",
       "weight": 1.0,
       "source": "components_controlsbar",
       "target": "components_controlsbar_bginputprops",
@@ -5711,7 +5668,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L247",
+      "source_location": "L243",
       "weight": 1.0,
       "source": "components_controlsbar",
       "target": "components_controlsbar_colorinput",
@@ -5721,7 +5678,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L239",
+      "source_location": "L235",
       "weight": 1.0,
       "source": "components_controlsbar",
       "target": "components_controlsbar_colorinputprops",
@@ -5731,7 +5688,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L275",
+      "source_location": "L271",
       "weight": 1.0,
       "source": "components_controlsbar",
       "target": "components_controlsbar_controlsbar",
@@ -5751,7 +5708,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L98",
+      "source_location": "L94",
       "weight": 1.0,
       "source": "components_controlsbar",
       "target": "components_controlsbar_isactivepreset",
@@ -5761,7 +5718,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L198",
+      "source_location": "L194",
       "weight": 1.0,
       "source": "components_controlsbar",
       "target": "components_controlsbar_isvalidcsscolor",
@@ -5771,7 +5728,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L53",
+      "source_location": "L49",
       "weight": 1.0,
       "source": "components_controlsbar",
       "target": "components_controlsbar_labelstyle",
@@ -5781,7 +5738,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L67",
+      "source_location": "L63",
       "weight": 1.0,
       "source": "components_controlsbar",
       "target": "components_controlsbar_numberinputstyle",
@@ -5791,7 +5748,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L82",
+      "source_location": "L78",
       "weight": 1.0,
       "source": "components_controlsbar",
       "target": "components_controlsbar_segbuttonstyle",
@@ -5801,7 +5758,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L164",
+      "source_location": "L160",
       "weight": 1.0,
       "source": "components_controlsbar",
       "target": "components_controlsbar_sliderfield",
@@ -5811,7 +5768,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L109",
+      "source_location": "L105",
       "weight": 1.0,
       "source": "components_controlsbar",
       "target": "components_controlsbar_sliderfieldprops",
@@ -5821,7 +5778,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L119",
+      "source_location": "L115",
       "weight": 1.0,
       "source": "components_controlsbar",
       "target": "components_controlsbar_slidernumberinput",
@@ -5831,7 +5788,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L63",
+      "source_location": "L59",
       "weight": 1.0,
       "source": "components_controlsbar",
       "target": "components_controlsbar_sliderstyle",
@@ -5841,7 +5798,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L77",
+      "source_location": "L73",
       "weight": 1.0,
       "source": "components_controlsbar",
       "target": "components_controlsbar_textinputstyle",
@@ -5940,7 +5897,7 @@
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L44",
+      "source_location": "L40",
       "weight": 1.0,
       "source": "components_controlsbar_controlsbarprops",
       "target": "lib_aspect_ratio_aspectratiopreset",
@@ -5973,7 +5930,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L179",
+      "source_location": "L175",
       "weight": 1.0,
       "source": "components_controlsbar_sliderfield",
       "target": "components_controlsbar_sliderstyle",
@@ -5984,7 +5941,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L341",
+      "source_location": "L492",
       "weight": 1.0,
       "source": "components_controlsbar_controlsbar",
       "target": "components_controlsbar_segbuttonstyle",
@@ -5995,7 +5952,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "components/ControlsBar.tsx",
-      "source_location": "L504",
+      "source_location": "L484",
       "weight": 1.0,
       "source": "components_controlsbar_controlsbar",
       "target": "components_controlsbar_isactivepreset",
@@ -7375,7 +7332,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "lib/convert.ts",
-      "source_location": "L121",
+      "source_location": "L86",
       "weight": 1.0,
       "source": "lib_convert_convertimage",
       "target": "lib_canvas_render_charcellsize"
@@ -7427,7 +7384,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "lib/convert.ts",
-      "source_location": "L114",
+      "source_location": "L79",
       "weight": 1.0,
       "source": "lib_convert",
       "target": "lib_convert_convertimage",
@@ -7451,16 +7408,6 @@
       "weight": 1.0,
       "source": "lib_convert",
       "target": "lib_convert_fetchsession",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "lib/convert.ts",
-      "source_location": "L89",
-      "weight": 1.0,
-      "source": "lib_convert",
-      "target": "lib_convert_getautoparams",
       "confidence_score": 1.0
     },
     {
@@ -7524,17 +7471,6 @@
       "weight": 1.0,
       "source": "lib_convert",
       "target": "lib_types_asciiresult",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "lib/convert.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "lib_convert",
-      "target": "lib_types_autoparams",
       "confidence_score": 1.0
     },
     {
@@ -7619,7 +7555,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "lib/convert.ts",
-      "source_location": "L140",
+      "source_location": "L105",
       "weight": 1.0,
       "source": "lib_convert_convertimage",
       "target": "lib_convert_clampoutputsize",
@@ -7630,7 +7566,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "lib/convert.ts",
-      "source_location": "L120",
+      "source_location": "L85",
       "weight": 1.0,
       "source": "lib_convert_convertimage",
       "target": "lib_convert_effectivefontsize",
@@ -8615,17 +8551,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "lib/types.ts",
-      "source_location": "L39",
-      "weight": 1.0,
-      "source": "lib_types",
-      "target": "lib_types_autoparams",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "lib/types.ts",
-      "source_location": "L80",
+      "source_location": "L68",
       "weight": 1.0,
       "source": "lib_types",
       "target": "lib_types_backendcrashpayload",
@@ -8635,7 +8561,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "lib/types.ts",
-      "source_location": "L46",
+      "source_location": "L34",
       "weight": 1.0,
       "source": "lib_types",
       "target": "lib_types_convertparams",
@@ -8645,7 +8571,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "lib/types.ts",
-      "source_location": "L88",
+      "source_location": "L76",
       "weight": 1.0,
       "source": "lib_types",
       "target": "lib_types_crashpayload",
@@ -8655,7 +8581,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "lib/types.ts",
-      "source_location": "L70",
+      "source_location": "L58",
       "weight": 1.0,
       "source": "lib_types",
       "target": "lib_types_frontendcrashpayload",
@@ -8665,7 +8591,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "lib/types.ts",
-      "source_location": "L64",
+      "source_location": "L52",
       "weight": 1.0,
       "source": "lib_types",
       "target": "lib_types_healthresponse",
@@ -9139,17 +9065,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/converters.py",
-      "source_location": "L36",
-      "weight": 1.0,
-      "source": "server_converters",
-      "target": "server_converters_analyze_image",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/converters.py",
-      "source_location": "L95",
+      "source_location": "L79",
       "weight": 1.0,
       "source": "server_converters",
       "target": "server_converters_convert_to_ansi_grid",
@@ -9159,7 +9075,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/converters.py",
-      "source_location": "L51",
+      "source_location": "L35",
       "weight": 1.0,
       "source": "server_converters",
       "target": "server_converters_convert_to_ascii_grid",
@@ -9202,18 +9118,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/converters.py",
-      "source_location": "L47",
-      "weight": 1.0,
-      "source": "server_converters_analyze_image",
-      "target": "server_converters_preprocess",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/converters.py",
-      "source_location": "L108",
+      "source_location": "L92",
       "weight": 1.0,
       "source": "server_converters_convert_to_ansi_grid",
       "target": "server_converters_preprocess",
@@ -9224,7 +9129,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/converters.py",
-      "source_location": "L64",
+      "source_location": "L48",
       "weight": 1.0,
       "source": "server_converters_convert_to_ascii_grid",
       "target": "server_converters_preprocess",
@@ -9256,72 +9161,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "server/converters.py",
-      "source_location": "L36",
-      "weight": 1.0,
-      "source": "server_converters_analyze_image",
-      "target": "server_converters_py_any",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "server/converters.py",
-      "source_location": "L37",
-      "weight": 1.0,
-      "source": "server_converters_rationale_37",
-      "target": "server_converters_analyze_image",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "server/main.py",
-      "source_location": "L172",
-      "weight": 1.0,
-      "source": "server_main_analyze",
-      "target": "server_converters_analyze_image"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "server/tests/test_converters.py",
-      "source_location": "L193",
-      "weight": 1.0,
-      "source": "server_tests_test_converters_test_analyze_image_invert_changes_params",
-      "target": "server_converters_analyze_image"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "server/tests/test_converters.py",
-      "source_location": "L142",
-      "weight": 1.0,
-      "source": "server_tests_test_converters_test_analyze_image_returns_auto_params",
-      "target": "server_converters_analyze_image"
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "server/converters.py",
-      "source_location": "L95",
-      "weight": 1.0,
-      "source": "server_converters_convert_to_ansi_grid",
-      "target": "server_converters_py_any",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "server/converters.py",
-      "source_location": "L51",
+      "source_location": "L35",
       "weight": 1.0,
       "source": "server_converters_convert_to_ascii_grid",
       "target": "server_converters_py_any",
@@ -9333,7 +9173,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "server/main.py",
-      "source_location": "L206",
+      "source_location": "L189",
       "weight": 1.0,
       "source": "server_main_convert_ascii",
       "target": "server_converters_convert_to_ascii_grid"
@@ -9344,7 +9184,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L158",
+      "source_location": "L148",
       "weight": 1.0,
       "source": "server_tests_test_converters_test_ascii_grid_blur_changes_pixels",
       "target": "server_converters_convert_to_ascii_grid"
@@ -9388,7 +9228,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L150",
+      "source_location": "L140",
       "weight": 1.0,
       "source": "server_tests_test_converters_test_ascii_grid_invert_changes_pixels",
       "target": "server_converters_convert_to_ascii_grid"
@@ -9410,7 +9250,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L212",
+      "source_location": "L194",
       "weight": 1.0,
       "source": "server_tests_test_converters_test_ascii_grid_sharpness_and_saturate_accepted",
       "target": "server_converters_convert_to_ascii_grid"
@@ -9432,10 +9272,21 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L207",
+      "source_location": "L189",
       "weight": 1.0,
       "source": "server_tests_test_converters_test_preprocess_handles_rgba_invert",
       "target": "server_converters_convert_to_ascii_grid"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "server/converters.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "server_converters_convert_to_ansi_grid",
+      "target": "server_converters_py_any",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -9443,7 +9294,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "server/main.py",
-      "source_location": "L252",
+      "source_location": "L235",
       "weight": 1.0,
       "source": "server_main_convert_ansi",
       "target": "server_converters_convert_to_ansi_grid"
@@ -9454,7 +9305,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L181",
+      "source_location": "L171",
       "weight": 1.0,
       "source": "server_tests_test_converters_test_ansi_grid_blur_changes_output",
       "target": "server_converters_convert_to_ansi_grid"
@@ -9465,7 +9316,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L168",
+      "source_location": "L158",
       "weight": 1.0,
       "source": "server_tests_test_converters_test_ansi_grid_invert_changes_output",
       "target": "server_converters_convert_to_ansi_grid"
@@ -9507,17 +9358,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/main.py",
-      "source_location": "L164",
-      "weight": 1.0,
-      "source": "server_main",
-      "target": "server_main_analyze",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/main.py",
-      "source_location": "L226",
+      "source_location": "L209",
       "weight": 1.0,
       "source": "server_main",
       "target": "server_main_convert_ansi",
@@ -9527,7 +9368,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/main.py",
-      "source_location": "L181",
+      "source_location": "L164",
       "weight": 1.0,
       "source": "server_main",
       "target": "server_main_convert_ascii",
@@ -9652,18 +9493,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "server/main.py",
-      "source_location": "L164",
-      "weight": 1.0,
-      "source": "server_main_analyze",
-      "target": "request",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "server/main.py",
-      "source_location": "L226",
+      "source_location": "L209",
       "weight": 1.0,
       "source": "server_main_convert_ansi",
       "target": "request",
@@ -9674,7 +9504,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "server/main.py",
-      "source_location": "L181",
+      "source_location": "L164",
       "weight": 1.0,
       "source": "server_main_convert_ascii",
       "target": "request",
@@ -9696,18 +9526,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "server/main.py",
-      "source_location": "L164",
-      "weight": 1.0,
-      "source": "server_main_analyze",
-      "target": "server_main_py_any",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "server/main.py",
-      "source_location": "L226",
+      "source_location": "L209",
       "weight": 1.0,
       "source": "server_main_convert_ansi",
       "target": "server_main_py_any",
@@ -9718,7 +9537,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "server/main.py",
-      "source_location": "L181",
+      "source_location": "L164",
       "weight": 1.0,
       "source": "server_main_convert_ascii",
       "target": "server_main_py_any",
@@ -9762,18 +9581,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "server/main.py",
-      "source_location": "L164",
-      "weight": 1.0,
-      "source": "server_main_analyze",
-      "target": "uploadfile",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "server/main.py",
-      "source_location": "L226",
+      "source_location": "L209",
       "weight": 1.0,
       "source": "server_main_convert_ansi",
       "target": "uploadfile",
@@ -9784,7 +9592,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "server/main.py",
-      "source_location": "L181",
+      "source_location": "L164",
       "weight": 1.0,
       "source": "server_main_convert_ascii",
       "target": "uploadfile",
@@ -9817,18 +9625,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/main.py",
-      "source_location": "L170",
-      "weight": 1.0,
-      "source": "server_main_analyze",
-      "target": "server_main_save_upload",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/main.py",
-      "source_location": "L241",
+      "source_location": "L224",
       "weight": 1.0,
       "source": "server_main_convert_ansi",
       "target": "server_main_save_upload",
@@ -9839,7 +9636,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/main.py",
-      "source_location": "L194",
+      "source_location": "L177",
       "weight": 1.0,
       "source": "server_main_convert_ascii",
       "target": "server_main_save_upload",
@@ -9850,7 +9647,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/main.py",
-      "source_location": "L243",
+      "source_location": "L226",
       "weight": 1.0,
       "source": "server_main_convert_ansi",
       "target": "server_main_estimate_rows",
@@ -9861,7 +9658,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/main.py",
-      "source_location": "L196",
+      "source_location": "L179",
       "weight": 1.0,
       "source": "server_main_convert_ascii",
       "target": "server_main_estimate_rows",
@@ -9872,7 +9669,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/main.py",
-      "source_location": "L251",
+      "source_location": "L234",
       "weight": 1.0,
       "source": "server_main_convert_ansi",
       "target": "server_main_validate_output_size",
@@ -9883,7 +9680,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/main.py",
-      "source_location": "L205",
+      "source_location": "L188",
       "weight": 1.0,
       "source": "server_main_convert_ascii",
       "target": "server_main_validate_output_size",
@@ -9903,27 +9700,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L190",
-      "weight": 1.0,
-      "source": "server_tests_test_converters",
-      "target": "server_tests_test_converters_test_analyze_image_invert_changes_params",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/tests/test_converters.py",
-      "source_location": "L139",
-      "weight": 1.0,
-      "source": "server_tests_test_converters",
-      "target": "server_tests_test_converters_test_analyze_image_returns_auto_params",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/tests/test_converters.py",
-      "source_location": "L178",
+      "source_location": "L168",
       "weight": 1.0,
       "source": "server_tests_test_converters",
       "target": "server_tests_test_converters_test_ansi_grid_blur_changes_output",
@@ -9933,7 +9710,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L165",
+      "source_location": "L155",
       "weight": 1.0,
       "source": "server_tests_test_converters",
       "target": "server_tests_test_converters_test_ansi_grid_invert_changes_output",
@@ -9973,7 +9750,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L157",
+      "source_location": "L147",
       "weight": 1.0,
       "source": "server_tests_test_converters",
       "target": "server_tests_test_converters_test_ascii_grid_blur_changes_pixels",
@@ -10013,7 +9790,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L149",
+      "source_location": "L139",
       "weight": 1.0,
       "source": "server_tests_test_converters",
       "target": "server_tests_test_converters_test_ascii_grid_invert_changes_pixels",
@@ -10033,7 +9810,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L211",
+      "source_location": "L193",
       "weight": 1.0,
       "source": "server_tests_test_converters",
       "target": "server_tests_test_converters_test_ascii_grid_sharpness_and_saturate_accepted",
@@ -10053,7 +9830,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L198",
+      "source_location": "L180",
       "weight": 1.0,
       "source": "server_tests_test_converters",
       "target": "server_tests_test_converters_test_preprocess_handles_rgba_invert",
@@ -10085,9 +9862,9 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_converters.py",
-      "source_location": "L199",
+      "source_location": "L181",
       "weight": 1.0,
-      "source": "server_tests_test_converters_rationale_199",
+      "source": "server_tests_test_converters_rationale_181",
       "target": "server_tests_test_converters_test_preprocess_handles_rgba_invert",
       "confidence_score": 1.0
     },
@@ -10115,37 +9892,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L100",
-      "weight": 1.0,
-      "source": "server_tests_test_main",
-      "target": "server_tests_test_main_test_analyze_accepts_invert_and_blur",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/tests/test_main.py",
-      "source_location": "L52",
-      "weight": 1.0,
-      "source": "server_tests_test_main",
-      "target": "server_tests_test_main_test_analyze_rejects_bad_image",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/tests/test_main.py",
-      "source_location": "L42",
-      "weight": 1.0,
-      "source": "server_tests_test_main",
-      "target": "server_tests_test_main_test_analyze_returns_auto_params",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/tests/test_main.py",
-      "source_location": "L120",
+      "source_location": "L91",
       "weight": 1.0,
       "source": "server_tests_test_main",
       "target": "server_tests_test_main_test_convert_ansi_rejects_bad_palette",
@@ -10155,7 +9902,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L144",
+      "source_location": "L115",
       "weight": 1.0,
       "source": "server_tests_test_main",
       "target": "server_tests_test_main_test_convert_ansi_rejects_oversized_output",
@@ -10165,7 +9912,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L72",
+      "source_location": "L54",
       "weight": 1.0,
       "source": "server_tests_test_main",
       "target": "server_tests_test_main_test_convert_ansi_returns_grid_and_text",
@@ -10175,7 +9922,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L85",
+      "source_location": "L67",
       "weight": 1.0,
       "source": "server_tests_test_main",
       "target": "server_tests_test_main_test_convert_ascii_invert_and_blur_change_output",
@@ -10185,7 +9932,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L111",
+      "source_location": "L82",
       "weight": 1.0,
       "source": "server_tests_test_main",
       "target": "server_tests_test_main_test_convert_ascii_rejects_bad_image",
@@ -10195,7 +9942,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L129",
+      "source_location": "L100",
       "weight": 1.0,
       "source": "server_tests_test_main",
       "target": "server_tests_test_main_test_convert_ascii_rejects_oversized_output",
@@ -10205,7 +9952,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L60",
+      "source_location": "L42",
       "weight": 1.0,
       "source": "server_tests_test_main",
       "target": "server_tests_test_main_test_convert_ascii_returns_grid",
@@ -10225,7 +9972,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L164",
+      "source_location": "L135",
       "weight": 1.0,
       "source": "server_tests_test_main",
       "target": "server_tests_test_main_test_health_returns_local_false_by_default",
@@ -10235,7 +9982,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L170",
+      "source_location": "L141",
       "weight": 1.0,
       "source": "server_tests_test_main",
       "target": "server_tests_test_main_test_health_returns_local_true_when_env_set",
@@ -10245,7 +9992,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L202",
+      "source_location": "L173",
       "weight": 1.0,
       "source": "server_tests_test_main",
       "target": "server_tests_test_main_test_session_404_for_unknown_id",
@@ -10255,7 +10002,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L190",
+      "source_location": "L161",
       "weight": 1.0,
       "source": "server_tests_test_main",
       "target": "server_tests_test_main_test_session_returns_uploaded_file",
@@ -10265,7 +10012,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L179",
+      "source_location": "L150",
       "weight": 1.0,
       "source": "server_tests_test_main",
       "target": "server_tests_test_main_test_upload_returns_session_id",
@@ -10275,7 +10022,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L214",
+      "source_location": "L185",
       "weight": 1.0,
       "source": "server_tests_test_main",
       "target": "server_tests_test_main_test_validate_output_size_enforced_when_not_local",
@@ -10285,7 +10032,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L207",
+      "source_location": "L178",
       "weight": 1.0,
       "source": "server_tests_test_main",
       "target": "server_tests_test_main_test_validate_output_size_skipped_when_local",
@@ -10296,29 +10043,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L103",
-      "weight": 1.0,
-      "source": "server_tests_test_main_test_analyze_accepts_invert_and_blur",
-      "target": "server_tests_test_main_sample_png_bytes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/tests/test_main.py",
-      "source_location": "L45",
-      "weight": 1.0,
-      "source": "server_tests_test_main_test_analyze_returns_auto_params",
-      "target": "server_tests_test_main_sample_png_bytes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/tests/test_main.py",
-      "source_location": "L123",
+      "source_location": "L94",
       "weight": 1.0,
       "source": "server_tests_test_main_test_convert_ansi_rejects_bad_palette",
       "target": "server_tests_test_main_sample_png_bytes",
@@ -10329,7 +10054,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L147",
+      "source_location": "L118",
       "weight": 1.0,
       "source": "server_tests_test_main_test_convert_ansi_rejects_oversized_output",
       "target": "server_tests_test_main_sample_png_bytes",
@@ -10340,7 +10065,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L75",
+      "source_location": "L57",
       "weight": 1.0,
       "source": "server_tests_test_main_test_convert_ansi_returns_grid_and_text",
       "target": "server_tests_test_main_sample_png_bytes",
@@ -10351,7 +10076,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L88",
+      "source_location": "L70",
       "weight": 1.0,
       "source": "server_tests_test_main_test_convert_ascii_invert_and_blur_change_output",
       "target": "server_tests_test_main_sample_png_bytes",
@@ -10362,7 +10087,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L132",
+      "source_location": "L103",
       "weight": 1.0,
       "source": "server_tests_test_main_test_convert_ascii_rejects_oversized_output",
       "target": "server_tests_test_main_sample_png_bytes",
@@ -10373,7 +10098,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L63",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "server_tests_test_main_test_convert_ascii_returns_grid",
       "target": "server_tests_test_main_sample_png_bytes",
@@ -10384,7 +10109,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L191",
+      "source_location": "L162",
       "weight": 1.0,
       "source": "server_tests_test_main_test_session_returns_uploaded_file",
       "target": "server_tests_test_main_sample_png_bytes",
@@ -10395,7 +10120,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "server/tests/test_main.py",
-      "source_location": "L182",
+      "source_location": "L153",
       "weight": 1.0,
       "source": "server_tests_test_main_test_upload_returns_session_id",
       "target": "server_tests_test_main_sample_png_bytes",
@@ -11306,14 +11031,101 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "server/requirements-dev.txt",
-      "source_location": "-r requirements.txt",
+      "source_file": "server/requirements.txt",
+      "source_location": null,
       "weight": 1.0,
-      "source": "server_requirements_dev_deps",
-      "target": "server_requirements_deps"
+      "source": "server_requirements_txt",
+      "target": "server_cairosvg"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/requirements.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "server_requirements_txt",
+      "target": "server_fastapi"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/requirements.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "server_requirements_txt",
+      "target": "server_image2"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/requirements.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "server_requirements_txt",
+      "target": "server_pillow"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/requirements.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "server_requirements_txt",
+      "target": "server_pydantic"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/requirements.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "server_requirements_txt",
+      "target": "server_slowapi"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/requirements.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "server_requirements_txt",
+      "target": "server_uvicorn"
     }
   ],
   "hyperedges": [
+    {
+      "id": "web_server_stack",
+      "label": "Web Server Stack",
+      "nodes": [
+        "server_fastapi",
+        "server_uvicorn",
+        "server_slowapi",
+        "server_pydantic"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "server/requirements.txt"
+    },
+    {
+      "id": "image_processing_stack",
+      "label": "Image Processing Stack",
+      "nodes": [
+        "server_image2",
+        "server_cairosvg",
+        "server_pillow"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "server/requirements.txt"
+    },
     {
       "id": "ci_cd_deploy_pipeline",
       "label": "CI/CD Pipeline: CodeQL -> Docker Image -> Deploy",
@@ -11355,5 +11167,5 @@
       "source_file": ".github/workflows/graphify-freshness.yml"
     }
   ],
-  "built_at_commit": "8a7ff9fa917b7c3d187a19b0a8cf450196ddce13"
+  "built_at_commit": "a03d79984c1c195dc8a078ca9b9719c4301afb4f"
 }

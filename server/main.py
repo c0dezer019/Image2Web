@@ -17,7 +17,7 @@ from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
 from slowapi.util import get_remote_address
 
-from converters import analyze_image, convert_to_ansi_grid, convert_to_ascii_grid
+from converters import convert_to_ansi_grid, convert_to_ascii_grid
 
 logging.basicConfig(level=os.environ.get("LOG_LEVEL", "INFO").upper())
 logger = logging.getLogger("image2")
@@ -157,23 +157,6 @@ def _validate_output_size(cols: int, rows: int, *, mode: str) -> None:
         raise HTTPException(
             status_code=422, detail="Output dimensions exceed server limits"
         )
-
-
-@app.post("/analyze")
-@limiter.limit("20/minute")
-def analyze(
-    request: Request,
-    file: UploadFile = File(...),
-    invert: bool = Form(False),
-    blur: float = Form(0.0, ge=0, le=25),
-) -> dict[str, Any]:
-    path = _save_upload(file)
-    try:
-        return analyze_image(path, invert=invert, blur=blur)
-    except UnidentifiedImageError:
-        raise HTTPException(status_code=422, detail="Could not read image file")
-    finally:
-        os.remove(path)
 
 
 @app.post("/convert/ascii")

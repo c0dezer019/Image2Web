@@ -1,68 +1,64 @@
 # Graph Report - Image2-Web  (2026-07-06)
 
 ## Corpus Check
-- 70 files · ~22,894 words
+- 70 files · ~22,271 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 399 nodes · 679 edges · 41 communities (23 shown, 18 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 24 edges (avg confidence: 0.81)
+- 393 nodes · 661 edges · 37 communities (22 shown, 15 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 21 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8a7ff9fa`
+- Built from commit: `a03d7998`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_Image Conversion Core|Image Conversion Core]]
-- [[_COMMUNITY_App Shell & Crash Reporting|App Shell & Crash Reporting]]
-- [[_COMMUNITY_Controls Bar & Session UI|Controls Bar & Session UI]]
-- [[_COMMUNITY_Server Image Converters (Python)|Server Image Converters (Python)]]
-- [[_COMMUNITY_package.json Manifest|package.json Manifest]]
-- [[_COMMUNITY_Deploy Docs & CI Workflows|Deploy Docs & CI Workflows]]
-- [[_COMMUNITY_Feedback & Job State|Feedback & Job State]]
-- [[_COMMUNITY_Server API Tests (FastAPI)|Server API Tests (FastAPI)]]
-- [[_COMMUNITY_Legal Pages|Legal Pages]]
+- [[_COMMUNITY_Home Page & Controls Bar|Home Page & Controls Bar]]
+- [[_COMMUNITY_App Layout & Error Boundaries|App Layout & Error Boundaries]]
+- [[_COMMUNITY_Deployment Docs & CI Workflows|Deployment Docs & CI Workflows]]
+- [[_COMMUNITY_Frontend Package Config|Frontend Package Config]]
+- [[_COMMUNITY_Image Converter (Server)|Image Converter (Server)]]
+- [[_COMMUNITY_Client Image Compression|Client Image Compression]]
+- [[_COMMUNITY_Feedback Form & Browser Info|Feedback Form & Browser Info]]
+- [[_COMMUNITY_Static Info Pages|Static Info Pages]]
 - [[_COMMUNITY_TypeScript Config|TypeScript Config]]
-- [[_COMMUNITY_Image Compression|Image Compression]]
-- [[_COMMUNITY_FastAPI Server Routes|FastAPI Server Routes]]
-- [[_COMMUNITY_Download Page & Platform Detection|Download Page & Platform Detection]]
-- [[_COMMUNITY_DropZone & Validation|DropZone & Validation]]
-- [[_COMMUNITY_Bug Report API Route|Bug Report API Route]]
-- [[_COMMUNITY_CLAUDE.md Architecture Notes|CLAUDE.md Architecture Notes]]
-- [[_COMMUNITY_Graphify Rules & Freshness Gate|Graphify Rules & Freshness Gate]]
-- [[_COMMUNITY_Docker Image CI (Server)|Docker Image CI (Server)]]
-- [[_COMMUNITY_AGENTS.md Next.js Warning|AGENTS.md Next.js Warning]]
+- [[_COMMUNITY_Server Conversion Tests|Server Conversion Tests]]
+- [[_COMMUNITY_Download Page & Release Assets|Download Page & Release Assets]]
+- [[_COMMUNITY_Controls Bar Inputs|Controls Bar Inputs]]
+- [[_COMMUNITY_FastAPI Server Endpoints|FastAPI Server Endpoints]]
+- [[_COMMUNITY_Project Instructions (CLAUDE.md)|Project Instructions (CLAUDE.md)]]
+- [[_COMMUNITY_CICD Build & Deploy Jobs|CI/CD Build & Deploy Jobs]]
+- [[_COMMUNITY_Server Python Dependencies|Server Python Dependencies]]
+- [[_COMMUNITY_BugFeedback API Route|Bug/Feedback API Route]]
+- [[_COMMUNITY_Server CI Gate Jobs|Server CI Gate Jobs]]
+- [[_COMMUNITY_Next.js Breaking-Changes Notice|Next.js Breaking-Changes Notice]]
 - [[_COMMUNITY_ESLint Config|ESLint Config]]
 - [[_COMMUNITY_Next.js Config|Next.js Config]]
 - [[_COMMUNITY_PostCSS Config|PostCSS Config]]
-- [[_COMMUNITY_Server Requirements|Server Requirements]]
-- [[_COMMUNITY_CLAUDE.md Commands|CLAUDE.md Commands]]
-- [[_COMMUNITY_CLAUDE.md Environment Vars|CLAUDE.md Environment Vars]]
+- [[_COMMUNITY_Next.js Breaking Changes Warning|Next.js Breaking Changes Warning]]
+- [[_COMMUNITY_CORS Allowlist|CORS Allowlist]]
+- [[_COMMUNITY_Direct Browser-to-Server Upload|Direct Browser-to-Server Upload]]
 - [[_COMMUNITY_file.svg Icon|file.svg Icon]]
 - [[_COMMUNITY_globe.svg Icon|globe.svg Icon]]
 - [[_COMMUNITY_window.svg Icon|window.svg Icon]]
-- [[_COMMUNITY_flake8 Dev Dep|flake8 Dev Dep]]
-- [[_COMMUNITY_pytest Dev Dep|pytest Dev Dep]]
-- [[_COMMUNITY_Pillow Dep|Pillow Dep]]
-- [[_COMMUNITY_Next.js Breaking Changes Warning|Next.js Breaking Changes Warning]]
-- [[_COMMUNITY_CORS Allowlist (servermain.py)|CORS Allowlist (server/main.py)]]
-- [[_COMMUNITY_Direct Browser-to-Server Upload|Direct Browser-to-Server Upload]]
-- [[_COMMUNITY_Per-IP Rate Limiting (slowapi)|Per-IP Rate Limiting (slowapi)]]
-- [[_COMMUNITY_serverVERSION Semver Policy|server/VERSION Semver Policy]]
-- [[_COMMUNITY_image2 (GitHub-sourced conversion dependency)|image2 (GitHub-sourced conversion dependency)]]
+- [[_COMMUNITY_Per-IP Rate Limiting|Per-IP Rate Limiting]]
+- [[_COMMUNITY_Server Version Policy|Server Version Policy]]
+- [[_COMMUNITY_Server Dev Dependencies|Server Dev Dependencies]]
+- [[_COMMUNITY_flake8 Linter|flake8 Linter]]
+- [[_COMMUNITY_pytest Test Runner|pytest Test Runner]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `COLORS` - 16 edges
 2. `compilerOptions` - 16 edges
-3. `Home()` - 13 edges
-4. `convert_to_ascii_grid()` - 13 edges
-5. `_sample_png_bytes()` - 11 edges
-6. `reportCrash()` - 10 edges
-7. `compressImageIfNeeded()` - 10 edges
-8. `ConvertParams` - 9 edges
-9. `convert_to_ansi_grid()` - 9 edges
+3. `convert_to_ascii_grid()` - 13 edges
+4. `Home()` - 12 edges
+5. `reportCrash()` - 10 edges
+6. `compressImageIfNeeded()` - 10 edges
+7. `ConvertParams` - 9 edges
+8. `convert_to_ansi_grid()` - 9 edges
+9. `_sample_png_bytes()` - 9 edges
 10. `OutputMode` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -81,87 +77,85 @@
 - None detected.
 
 ## Hyperedges (group relationships)
+- **Web Server Stack** — server_fastapi, server_uvicorn, server_slowapi, server_pydantic [INFERRED 0.90]
+- **Image Processing Stack** — server_image2, server_cairosvg, server_pillow [INFERRED 0.90]
 - **CI/CD Pipeline: CodeQL -> Docker Image -> Deploy** — github_workflows_codeql_codeql_advanced, github_workflows_docker_image_docker_image_ci, github_workflows_deploy_deploy_to_fly_io, github_workflows_deploy_gate_job [EXTRACTED 0.90]
 - **Dual Docker Image Targets (Server vs Web/Local-mode)** — github_workflows_docker_image_gate_server, github_workflows_docker_image_gate_web, readme_local_mode [INFERRED 0.85]
 - **Graph freshness enforcement pattern** — claude_graphify, github_workflows_graphify_freshness_freshnesscheck, github_workflows_graphify_freshness_gatepolicy [INFERRED 0.85]
 
-## Communities (41 total, 18 thin omitted)
+## Communities (37 total, 15 thin omitted)
 
-### Community 0 - "Image Conversion Core"
-Cohesion: 0.11
-Nodes (26): Home(), parseNum(), SessionLoader(), SessionLoaderProps, VersionFooter(), charCellSize(), drawAnsiGrid(), drawAsciiGrid() (+18 more)
-
-### Community 1 - "App Shell & Crash Reporting"
-Cohesion: 0.13
-Nodes (23): Error(), GlobalError(), FIXED_ENHANCE_DEFAULTS, CrashReportBanner(), Props, Footer(), LINK_STYLE, OutputCanvas (+15 more)
-
-### Community 2 - "Controls Bar & Session UI"
+### Community 0 - "Home Page & Controls Bar"
 Cohesion: 0.12
-Nodes (16): BgInputProps, ColorInputProps, ControlsBar(), ControlsBarProps, isActivePreset(), labelStyle, numberInputStyle, segButtonStyle() (+8 more)
+Nodes (23): Home(), parseNum(), SessionLoader(), SessionLoaderProps, charCellSize(), drawAnsiGrid(), drawAsciiGrid(), clampOutputSize() (+15 more)
 
-### Community 3 - "Server Image Converters (Python)"
-Cohesion: 0.10
-Nodes (29): Image, Path, analyze_image(), convert_to_ansi_grid(), convert_to_ascii_grid(), _preprocess(), Any, Apply image2 CLI's ``--invert``/``--blur`` preprocessing.      Mirrors ``image2. (+21 more)
+### Community 1 - "App Layout & Error Boundaries"
+Cohesion: 0.15
+Nodes (19): Error(), GlobalError(), dmMono, metadata, spaceGrotesk, CookieBanner(), CrashReportBanner(), Props (+11 more)
 
-### Community 4 - "package.json Manifest"
-Cohesion: 0.08
-Nodes (25): dependencies, next, react, react-dom, @vercel/analytics, devDependencies, eslint, eslint-config-next (+17 more)
-
-### Community 5 - "Deploy Docs & CI Workflows"
+### Community 2 - "Deployment Docs & CI Workflows"
 Cohesion: 0.07
 Nodes (28): Build & run, Deploying, Logging, Server deployment, Version reporting, Wiring up the Next.js app, CodeQL Advanced Workflow, Deploy Dev to Railway Job (+20 more)
 
-### Community 6 - "Feedback & Job State"
+### Community 3 - "Frontend Package Config"
+Cohesion: 0.08
+Nodes (25): dependencies, next, react, react-dom, @vercel/analytics, devDependencies, eslint, eslint-config-next (+17 more)
+
+### Community 4 - "Image Converter (Server)"
+Cohesion: 0.13
+Nodes (23): Image, Path, convert_to_ansi_grid(), convert_to_ascii_grid(), _preprocess(), Any, Apply image2 CLI's ``--invert``/``--blur`` preprocessing.      Mirrors ``image2., ImageOps.invert errors on non-RGB modes; _preprocess must convert RGBA     (a co (+15 more)
+
+### Community 5 - "Client Image Compression"
+Cohesion: 0.11
+Nodes (16): blobToFile(), canvasToBlob(), compressImageIfNeeded(), computeScaledDimensions(), loadImage(), nextQuality(), QUALITY_MIME_TYPES, withJpegExtension() (+8 more)
+
+### Community 6 - "Feedback Form & Browser Info"
 Cohesion: 0.19
 Nodes (15): FeedbackForm(), FIELD_LABEL_STYLE, TOGGLE_ACTIVE, TOGGLE_BASE, getBrowserInfo(), FeedbackKind, FeedbackOptions, readScreenshot() (+7 more)
 
-### Community 7 - "Server API Tests (FastAPI)"
-Cohesion: 0.14
-Nodes (11): _sample_png_bytes(), test_analyze_accepts_invert_and_blur(), test_analyze_returns_auto_params(), test_convert_ansi_rejects_bad_palette(), test_convert_ansi_rejects_oversized_output(), test_convert_ansi_returns_grid_and_text(), test_convert_ascii_invert_and_blur_change_output(), test_convert_ascii_rejects_oversized_output() (+3 more)
-
-### Community 8 - "Legal Pages"
+### Community 7 - "Static Info Pages"
 Cohesion: 0.21
 Nodes (11): metadata, metadata, metadata, metadata, EFFECTIVE_DATE_STYLE, LegalPage(), LegalPageProps, P_STYLE (+3 more)
 
-### Community 9 - "TypeScript Config"
+### Community 8 - "TypeScript Config"
 Cohesion: 0.10
 Nodes (19): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+11 more)
 
-### Community 10 - "Image Compression"
-Cohesion: 0.20
-Nodes (10): blobToFile(), canvasToBlob(), compressImageIfNeeded(), computeScaledDimensions(), loadImage(), nextQuality(), QUALITY_MIME_TYPES, withJpegExtension() (+2 more)
+### Community 9 - "Server Conversion Tests"
+Cohesion: 0.16
+Nodes (9): _sample_png_bytes(), test_convert_ansi_rejects_bad_palette(), test_convert_ansi_rejects_oversized_output(), test_convert_ansi_returns_grid_and_text(), test_convert_ascii_invert_and_blur_change_output(), test_convert_ascii_rejects_oversized_output(), test_convert_ascii_returns_grid(), test_session_returns_uploaded_file() (+1 more)
 
-### Community 11 - "FastAPI Server Routes"
-Cohesion: 0.26
-Nodes (16): FileResponse, JSONResponse, RateLimitExceeded, Request, analyze(), convert_ansi(), convert_ascii(), _estimate_rows() (+8 more)
+### Community 10 - "Download Page & Release Assets"
+Cohesion: 0.09
+Nodes (27): DownloadPage(), FALLBACK_ASSETS, fetchRelease(), FIXED_ENHANCE_DEFAULTS, DownloadLinks(), Props, DropZone(), DropZoneProps (+19 more)
 
-### Community 12 - "Download Page & Platform Detection"
-Cohesion: 0.28
-Nodes (9): DownloadPage(), FALLBACK_ASSETS, fetchRelease(), DownloadLinks(), Props, detectPlatform(), PlatformDownload, ReleaseAssets (+1 more)
+### Community 11 - "Controls Bar Inputs"
+Cohesion: 0.12
+Nodes (16): BgInputProps, ColorInputProps, ControlsBar(), ControlsBarProps, isActivePreset(), labelStyle, numberInputStyle, segButtonStyle() (+8 more)
 
-### Community 13 - "DropZone & Validation"
-Cohesion: 0.21
-Nodes (7): DropZone(), DropZoneProps, createSampleImageBlob(), drawSampleScene(), ACCEPTED_TYPES, validateImageFile(), ValidationResult
+### Community 12 - "FastAPI Server Endpoints"
+Cohesion: 0.25
+Nodes (15): FileResponse, JSONResponse, RateLimitExceeded, Request, convert_ansi(), convert_ascii(), _estimate_rows(), get_session() (+7 more)
 
-### Community 14 - "Bug Report API Route"
-Cohesion: 0.40
-Nodes (5): BugPayload, BugReportPayload, FeedbackPayload, isValidPayload(), POST()
-
-### Community 16 - "Graphify Rules & Freshness Gate"
+### Community 14 - "Project Instructions (CLAUDE.md)"
 Cohesion: 0.22
 Nodes (8): Architecture, Commands, Environment, Gotchas, graphify, Rules, Graphify Freshness Check workflow, Graph freshness gate policy
 
-### Community 17 - "Docker Image CI (Server)"
-Cohesion: 0.67
-Nodes (3): Build and Push Dev (Server) Job, Build and Push Prod (Server) Job, Gate: Changes on Server Job
-
-### Community 24 - "CLAUDE.md Commands"
-Cohesion: 0.23
-Nodes (10): dmMono, metadata, spaceGrotesk, CookieBanner(), GlobalErrorListener(), ConsentState, getConsent(), getCrashConsent() (+2 more)
-
-### Community 25 - "CLAUDE.md Environment Vars"
+### Community 15 - "CI/CD Build & Deploy Jobs"
 Cohesion: 0.25
 Nodes (8): Build and Push Web Dev Job, Build and Push Web Prod Job, Gate: Changes on Frontend Job, next.svg (Next.js wordmark logo), vercel.svg (Vercel triangle logo), image2 CLI Tool, Local Mode (Docker/img2 ui), Vercel Frontend Deployment
+
+### Community 16 - "Server Python Dependencies"
+Cohesion: 0.25
+Nodes (8): CairoSVG, fastapi, image2, pillow, pydantic, server/requirements.txt, slowapi, uvicorn
+
+### Community 17 - "Bug/Feedback API Route"
+Cohesion: 0.40
+Nodes (5): BugPayload, BugReportPayload, FeedbackPayload, isValidPayload(), POST()
+
+### Community 19 - "Server CI Gate Jobs"
+Cohesion: 0.67
+Nodes (3): Build and Push Dev (Server) Job, Build and Push Prod (Server) Job, Gate: Changes on Server Job
 
 ## Ambiguous Edges - Review These
 - `Vercel Frontend Deployment` → `next.svg (Next.js wordmark logo)`  [AMBIGUOUS]
@@ -170,9 +164,9 @@ Nodes (8): Build and Push Web Dev Job, Build and Push Web Prod Job, Gate: Change
   public/vercel.svg · relation: conceptually_related_to
 
 ## Knowledge Gaps
-- **119 isolated node(s):** `FeedbackPayload`, `BugPayload`, `BugReportPayload`, `FALLBACK_ASSETS`, `metadata` (+114 more)
+- **122 isolated node(s):** `FeedbackPayload`, `BugPayload`, `BugReportPayload`, `FALLBACK_ASSETS`, `metadata` (+117 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -181,13 +175,13 @@ _Questions this graph is uniquely positioned to answer:_
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
 - **What is the exact relationship between `Vercel Frontend Deployment` and `vercel.svg (Vercel triangle logo)`?**
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
-- **Why does `MockImage` connect `Server Image Converters (Python)` to `App Shell & Crash Reporting`?**
-  _High betweenness centrality (0.171) - this node is a cross-community bridge._
-- **Why does `convert_to_ansi_grid()` connect `Server Image Converters (Python)` to `FastAPI Server Routes`?**
-  _High betweenness centrality (0.094) - this node is a cross-community bridge._
+- **Why does `MockImage` connect `Client Image Compression` to `Image Converter (Server)`?**
+  _High betweenness centrality (0.154) - this node is a cross-community bridge._
+- **Why does `convert_to_ansi_grid()` connect `Image Converter (Server)` to `FastAPI Server Endpoints`?**
+  _High betweenness centrality (0.086) - this node is a cross-community bridge._
 - **Are the 10 inferred relationships involving `convert_to_ascii_grid()` (e.g. with `convert_ascii()` and `test_ascii_grid_blur_changes_pixels()`) actually correct?**
   _`convert_to_ascii_grid()` has 10 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `FeedbackPayload`, `BugPayload`, `BugReportPayload` to the rest of the system?**
-  _126 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Image Conversion Core` be split into smaller, more focused modules?**
-  _Cohesion score 0.10960960960960961 - nodes in this community are weakly interconnected._
+  _128 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Home Page & Controls Bar` be split into smaller, more focused modules?**
+  _Cohesion score 0.12310606060606061 - nodes in this community are weakly interconnected._

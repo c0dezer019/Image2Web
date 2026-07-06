@@ -9,7 +9,7 @@ import { OutputCanvas } from "@/components/OutputCanvas";
 import { VersionFooter } from "@/components/VersionFooter";
 import { Footer } from "@/components/Footer";
 import { BG_HEX, COLORS, FONT_MONO } from "@/lib/theme";
-import { convertImage, effectiveFontSize, getAutoParams } from "@/lib/convert";
+import { convertImage, effectiveFontSize } from "@/lib/convert";
 import { getImageDimensions } from "@/lib/image-dimensions";
 import { compressImageIfNeeded } from "@/lib/image-compress";
 import { drawAsciiGrid, drawAnsiGrid } from "@/lib/canvas-render";
@@ -20,9 +20,7 @@ import { buildBackendPayload, reportCrash, type CrashPayload } from "@/lib/crash
 import { CrashReportBanner } from "@/components/CrashReportBanner";
 import { saveLastJobState } from "@/lib/job-state";
 
-// Old fixed enhancement defaults (image2 CLI's --no-auto values). Used as
-// the initial state before any image is analyzed, and as a fallback if
-// auto-detection fails.
+// Fixed enhancement defaults (image2 CLI's --no-auto values).
 const FIXED_ENHANCE_DEFAULTS = {
   contrast: 1.5,
   brightness: 1.0,
@@ -39,7 +37,6 @@ export default function Home() {
   const [sharpness, setSharpness] = useState(2.5);
   const [saturate, setSaturate] = useState(FIXED_ENHANCE_DEFAULTS.saturate);
   const [minLum, setMinLum] = useState(FIXED_ENHANCE_DEFAULTS.minLum);
-  const [analyzing, setAnalyzing] = useState(false);
   const [optimizing, setOptimizing] = useState(false);
   const [fontSize, setFontSize] = useState(6);
   const [palette, setPalette] = useState<AnsiPalette>("truecolor");
@@ -60,7 +57,6 @@ export default function Home() {
   const [copied, setCopied] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const requestIdRef = useRef(0);
-  const originalFileRef = useRef<File | null>(null);
 
   const sourceAspectRatio = sourceWidth > 0 && sourceHeight > 0 ? sourceWidth / sourceHeight : null;
 
@@ -78,10 +74,9 @@ export default function Home() {
     palette, invert, blur, asciiExplicitSize, fontSize, dense, imgWidth, imgHeight]);
 
   useEffect(() => {
-    // Skip while auto-params are being derived for a newly uploaded image —
-    // otherwise this fires once with the stale enhancement values and again
-    // once analysis lands, producing a visible flash.
-    if (!file || analyzing || optimizing) return;
+    // Skip while the newly uploaded image is still being compressed —
+    // otherwise this fires once against the pre-compression file.
+    if (!file || optimizing) return;
     const id = ++requestIdRef.current;
     const params = {
       mode, width, contrast, brightness, sharpness, saturate, minLum,
@@ -116,7 +111,7 @@ export default function Home() {
   // actually affect the request (ASCII + explicit image size); otherwise they
   // are render-only and don't trigger a server call.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [file, analyzing, optimizing, gridKey]);
+  }, [file, optimizing, gridKey]);
 
   useEffect(() => {
     if (!result || !canvasRef.current) return;
@@ -131,30 +126,14 @@ export default function Home() {
     }
   }, [result, mode, fontSize, bg, monochrome, fontColor, dense]);
 
-  const runAutoParams = useCallback((f: Blob) => {
-    setAnalyzing(true);
-    // invert/blur are pre-processing applied before auto-detect, mirroring
-    // the CLI's pipeline order — pass the current values so auto-detect
-    // reflects them.
-    getAutoParams(f, invert, blur)
-      .then((auto) => {
-        setContrast(auto.contrast);
-        setBrightness(auto.brightness);
-        setSaturate(auto.saturate);
-        setMinLum(auto.minLum);
-      })
-      .catch((err: unknown) => {
-        setContrast(FIXED_ENHANCE_DEFAULTS.contrast);
-        setBrightness(FIXED_ENHANCE_DEFAULTS.brightness);
-        setSaturate(FIXED_ENHANCE_DEFAULTS.saturate);
-        setMinLum(FIXED_ENHANCE_DEFAULTS.minLum);
-      })
-      .finally(() => setAnalyzing(false));
-  }, [invert, blur]);
-
   const handleFile = useCallback((f: File) => {
     setError(null);
-    originalFileRef.current = f;
+    // New image: reset enhancement controls to fixed defaults.
+    setContrast(FIXED_ENHANCE_DEFAULTS.contrast);
+    setBrightness(FIXED_ENHANCE_DEFAULTS.brightness);
+    setSharpness(2.5);
+    setSaturate(FIXED_ENHANCE_DEFAULTS.saturate);
+    setMinLum(FIXED_ENHANCE_DEFAULTS.minLum);
     // Pre-fill the Image width/height controls with the source image's real
     // pixel dimensions, mirroring the image2 CLI's use of the actual image
     // size when deriving cols/rows. Read from the original file, before any
@@ -180,29 +159,12 @@ export default function Home() {
     compressImageIfNeeded(f)
       .then((compressed) => {
         setFile(compressed);
-        runAutoParams(compressed);
       })
       .catch(() => {
         setError("Could not process image");
       })
       .finally(() => setOptimizing(false));
-  }, [runAutoParams]);
-
-  const handleAuto = useCallback(() => {
-    if (!file) return;
-    runAutoParams(file);
-    // Reset the Image width/height controls back to the source image's real
-    // pixel dimensions, same as on initial upload.
-    const original = originalFileRef.current;
-    if (original) {
-      getImageDimensions(original)
-        .then(({ width, height }) => {
-          setImgWidth(width);
-          setImgHeight(height);
-        })
-        .catch(() => {});
-    }
-  }, [file, runAutoParams]);
+  }, []);
 
   const handleFontSizeChange = useCallback((n: number) => {
     if (!Number.isFinite(n)) return;
@@ -427,10 +389,6 @@ export default function Home() {
             dense={dense}
             monochrome={monochrome}
             fontColor={fontColor}
-            hasFile={!!file}
-            analyzing={analyzing}
-            optimizing={optimizing}
-            onAuto={handleAuto}
             onWidthChange={(n) => {
               if (!Number.isFinite(n)) return;
               setWidth(Math.max(1, Math.round(n)));
