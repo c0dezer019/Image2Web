@@ -1,7 +1,7 @@
 # Graph Report - Image2-Web  (2026-07-06)
 
 ## Corpus Check
-- 70 files · ~22,888 words
+- 70 files · ~22,895 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,48 +10,48 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `eff7b7b7`
+- Built from commit: `8cf2f943`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_Image Conversion Pipeline|Image Conversion Pipeline]]
-- [[_COMMUNITY_App Shell & Crash Reporting|App Shell & Crash Reporting]]
-- [[_COMMUNITY_Controls & Session UI|Controls & Session UI]]
-- [[_COMMUNITY_Server Image Converters|Server Image Converters]]
+- [[_COMMUNITY_Output Header & Session UI|Output Header & Session UI]]
+- [[_COMMUNITY_App Shell & Error Boundaries|App Shell & Error Boundaries]]
+- [[_COMMUNITY_Server Deploy Docs|Server Deploy Docs]]
+- [[_COMMUNITY_Image Converters (Server)|Image Converters (Server)]]
 - [[_COMMUNITY_Package Dependencies|Package Dependencies]]
-- [[_COMMUNITY_CICD & Deploy Docs|CI/CD & Deploy Docs]]
-- [[_COMMUNITY_Feedback & Job State|Feedback & Job State]]
+- [[_COMMUNITY_Controls Bar UI|Controls Bar UI]]
+- [[_COMMUNITY_Feedback Form|Feedback Form]]
+- [[_COMMUNITY_Client Image Compression|Client Image Compression]]
+- [[_COMMUNITY_Download Page & Links|Download Page & Links]]
 - [[_COMMUNITY_Server Endpoint Tests|Server Endpoint Tests]]
-- [[_COMMUNITY_Legal Pages|Legal Pages]]
+- [[_COMMUNITY_EULA & Feedback Pages|EULA & Feedback Pages]]
 - [[_COMMUNITY_TS Compiler Config|TS Compiler Config]]
-- [[_COMMUNITY_Image Compression|Image Compression]]
 - [[_COMMUNITY_FastAPI Server Routes|FastAPI Server Routes]]
-- [[_COMMUNITY_Download Page & CLI|Download Page & CLI]]
-- [[_COMMUNITY_DropZone & Validation|DropZone & Validation]]
-- [[_COMMUNITY_Bug Report API|Bug Report API]]
-- [[_COMMUNITY_Server Requirements Doc|Server Requirements Doc]]
-- [[_COMMUNITY_Graphify Freshness Gate|Graphify Freshness Gate]]
-- [[_COMMUNITY_Docker Image Workflow|Docker Image Workflow]]
-- [[_COMMUNITY_AGENTS Breaking Changes|AGENTS Breaking Changes]]
+- [[_COMMUNITY_DropZone & Sample Image|DropZone & Sample Image]]
+- [[_COMMUNITY_Project CLAUDE|Project CLAUDE.md]]
+- [[_COMMUNITY_CICD Web Build Jobs|CI/CD Web Build Jobs]]
+- [[_COMMUNITY_BugFeedback Report API|Bug/Feedback Report API]]
+- [[_COMMUNITY_Home Page & Enhance Defaults|Home Page & Enhance Defaults]]
+- [[_COMMUNITY_CICD Server Build Jobs|CI/CD Server Build Jobs]]
+- [[_COMMUNITY_AGENTS.md Warning|AGENTS.md Warning]]
 - [[_COMMUNITY_ESLint Config|ESLint Config]]
 - [[_COMMUNITY_Next.js Config|Next.js Config]]
 - [[_COMMUNITY_PostCSS Config|PostCSS Config]]
-- [[_COMMUNITY_Server Requirements Split|Server Requirements Split]]
-- [[_COMMUNITY_CLAUDE Commands|CLAUDE Commands]]
-- [[_COMMUNITY_CLAUDE Environment Vars|CLAUDE Environment Vars]]
-- [[_COMMUNITY_File SVG Icon|File SVG Icon]]
-- [[_COMMUNITY_Globe SVG Icon|Globe SVG Icon]]
-- [[_COMMUNITY_Window SVG Icon|Window SVG Icon]]
-- [[_COMMUNITY_Flake8 Dev Dependency|Flake8 Dev Dependency]]
-- [[_COMMUNITY_Pytest Dev Dependency|Pytest Dev Dependency]]
-- [[_COMMUNITY_Pillow Dependency|Pillow Dependency]]
-- [[_COMMUNITY_Next.js Breaking Changes Warning|Next.js Breaking Changes Warning]]
-- [[_COMMUNITY_CORS Allowlist (servermain.py)|CORS Allowlist (server/main.py)]]
+- [[_COMMUNITY_Server Requirements Docs|Server Requirements Docs]]
+- [[_COMMUNITY_Next.js Breaking Changes Note|Next.js Breaking Changes Note]]
+- [[_COMMUNITY_CORS Allowlist|CORS Allowlist]]
 - [[_COMMUNITY_Direct Browser-to-Server Upload|Direct Browser-to-Server Upload]]
-- [[_COMMUNITY_Per-IP Rate Limiting (slowapi)|Per-IP Rate Limiting (slowapi)]]
-- [[_COMMUNITY_serverVERSION Semver Policy|server/VERSION Semver Policy]]
-- [[_COMMUNITY_image2 (GitHub-sourced conversion dependency)|image2 (GitHub-sourced conversion dependency)]]
+- [[_COMMUNITY_file.svg Icon|file.svg Icon]]
+- [[_COMMUNITY_globe.svg Icon|globe.svg Icon]]
+- [[_COMMUNITY_window.svg Icon|window.svg Icon]]
+- [[_COMMUNITY_Per-IP Rate Limiting|Per-IP Rate Limiting]]
+- [[_COMMUNITY_Server VERSION Policy|Server VERSION Policy]]
+- [[_COMMUNITY_flake8 Linter|flake8 Linter]]
+- [[_COMMUNITY_pytest Runner|pytest Runner]]
+- [[_COMMUNITY_FastAPI Framework Dep|FastAPI Framework Dep]]
+- [[_COMMUNITY_image2 CLI Dependency|image2 CLI Dependency]]
+- [[_COMMUNITY_Pillow Dependency|Pillow Dependency]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `COLORS` - 16 edges
@@ -87,19 +87,19 @@
 
 ## Communities (41 total, 18 thin omitted)
 
-### Community 0 - "Image Conversion Pipeline"
+### Community 0 - "Output Header & Session UI"
 Cohesion: 0.11
 Nodes (26): Home(), parseNum(), SessionLoader(), SessionLoaderProps, VersionFooter(), charCellSize(), drawAnsiGrid(), drawAsciiGrid() (+18 more)
 
-### Community 1 - "App Shell & Crash Reporting"
+### Community 1 - "App Shell & Error Boundaries"
 Cohesion: 0.13
 Nodes (23): Error(), GlobalError(), FIXED_ENHANCE_DEFAULTS, CrashReportBanner(), Props, Footer(), LINK_STYLE, OutputCanvas (+15 more)
 
-### Community 2 - "Controls & Session UI"
-Cohesion: 0.12
-Nodes (16): BgInputProps, ColorInputProps, ControlsBar(), ControlsBarProps, isActivePreset(), labelStyle, numberInputStyle, segButtonStyle() (+8 more)
+### Community 2 - "Server Deploy Docs"
+Cohesion: 0.07
+Nodes (28): Build & run, Deploying, Logging, Server deployment, Version reporting, Wiring up the Next.js app, CodeQL Advanced Workflow, Deploy Dev to Railway Job (+20 more)
 
-### Community 3 - "Server Image Converters"
+### Community 3 - "Image Converters (Server)"
 Cohesion: 0.10
 Nodes (29): Image, Path, analyze_image(), convert_to_ansi_grid(), convert_to_ascii_grid(), _preprocess(), Any, Apply image2 CLI's ``--invert``/``--blur`` preprocessing.      Mirrors ``image2. (+21 more)
 
@@ -107,61 +107,61 @@ Nodes (29): Image, Path, analyze_image(), convert_to_ansi_grid(), convert_to_asc
 Cohesion: 0.08
 Nodes (25): dependencies, next, react, react-dom, @vercel/analytics, devDependencies, eslint, eslint-config-next (+17 more)
 
-### Community 5 - "CI/CD & Deploy Docs"
-Cohesion: 0.07
-Nodes (28): Build & run, Deploying, Logging, Server deployment, Version reporting, Wiring up the Next.js app, CodeQL Advanced Workflow, Deploy Dev to Railway Job (+20 more)
+### Community 5 - "Controls Bar UI"
+Cohesion: 0.12
+Nodes (16): BgInputProps, ColorInputProps, ControlsBar(), ControlsBarProps, isActivePreset(), labelStyle, numberInputStyle, segButtonStyle() (+8 more)
 
-### Community 6 - "Feedback & Job State"
+### Community 6 - "Feedback Form"
 Cohesion: 0.19
 Nodes (15): FeedbackForm(), FIELD_LABEL_STYLE, TOGGLE_ACTIVE, TOGGLE_BASE, getBrowserInfo(), FeedbackKind, FeedbackOptions, readScreenshot() (+7 more)
 
-### Community 7 - "Server Endpoint Tests"
-Cohesion: 0.14
-Nodes (11): _sample_png_bytes(), test_analyze_accepts_invert_and_blur(), test_analyze_returns_auto_params(), test_convert_ansi_rejects_bad_palette(), test_convert_ansi_rejects_oversized_output(), test_convert_ansi_returns_grid_and_text(), test_convert_ascii_invert_and_blur_change_output(), test_convert_ascii_rejects_oversized_output() (+3 more)
-
-### Community 8 - "Legal Pages"
-Cohesion: 0.21
-Nodes (11): metadata, metadata, metadata, metadata, EFFECTIVE_DATE_STYLE, LegalPage(), LegalPageProps, P_STYLE (+3 more)
-
-### Community 9 - "TS Compiler Config"
-Cohesion: 0.10
-Nodes (19): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+11 more)
-
-### Community 10 - "Image Compression"
+### Community 7 - "Client Image Compression"
 Cohesion: 0.20
 Nodes (10): blobToFile(), canvasToBlob(), compressImageIfNeeded(), computeScaledDimensions(), loadImage(), nextQuality(), QUALITY_MIME_TYPES, withJpegExtension() (+2 more)
 
-### Community 11 - "FastAPI Server Routes"
-Cohesion: 0.26
-Nodes (16): FileResponse, JSONResponse, RateLimitExceeded, Request, analyze(), convert_ansi(), convert_ascii(), _estimate_rows() (+8 more)
-
-### Community 12 - "Download Page & CLI"
+### Community 8 - "Download Page & Links"
 Cohesion: 0.28
 Nodes (9): DownloadPage(), FALLBACK_ASSETS, fetchRelease(), DownloadLinks(), Props, detectPlatform(), PlatformDownload, ReleaseAssets (+1 more)
 
-### Community 13 - "DropZone & Validation"
+### Community 9 - "Server Endpoint Tests"
+Cohesion: 0.14
+Nodes (11): _sample_png_bytes(), test_analyze_accepts_invert_and_blur(), test_analyze_returns_auto_params(), test_convert_ansi_rejects_bad_palette(), test_convert_ansi_rejects_oversized_output(), test_convert_ansi_returns_grid_and_text(), test_convert_ascii_invert_and_blur_change_output(), test_convert_ascii_rejects_oversized_output() (+3 more)
+
+### Community 10 - "EULA & Feedback Pages"
+Cohesion: 0.21
+Nodes (11): metadata, metadata, metadata, metadata, EFFECTIVE_DATE_STYLE, LegalPage(), LegalPageProps, P_STYLE (+3 more)
+
+### Community 11 - "TS Compiler Config"
+Cohesion: 0.10
+Nodes (19): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+11 more)
+
+### Community 12 - "FastAPI Server Routes"
+Cohesion: 0.26
+Nodes (16): FileResponse, JSONResponse, RateLimitExceeded, Request, analyze(), convert_ansi(), convert_ascii(), _estimate_rows() (+8 more)
+
+### Community 13 - "DropZone & Sample Image"
 Cohesion: 0.21
 Nodes (7): DropZone(), DropZoneProps, createSampleImageBlob(), drawSampleScene(), ACCEPTED_TYPES, validateImageFile(), ValidationResult
 
-### Community 14 - "Bug Report API"
-Cohesion: 0.40
-Nodes (5): BugPayload, BugReportPayload, FeedbackPayload, isValidPayload(), POST()
-
-### Community 16 - "Graphify Freshness Gate"
+### Community 14 - "Project CLAUDE.md"
 Cohesion: 0.22
 Nodes (8): Architecture, Commands, Environment, Gotchas, graphify, Rules, Graphify Freshness Check workflow, Graph freshness gate policy
 
-### Community 17 - "Docker Image Workflow"
-Cohesion: 0.67
-Nodes (3): Build and Push Dev (Server) Job, Build and Push Prod (Server) Job, Gate: Changes on Server Job
+### Community 15 - "CI/CD Web Build Jobs"
+Cohesion: 0.25
+Nodes (8): Build and Push Web Dev Job, Build and Push Web Prod Job, Gate: Changes on Frontend Job, next.svg (Next.js wordmark logo), vercel.svg (Vercel triangle logo), image2 CLI Tool, Local Mode (Docker/img2 ui), Vercel Frontend Deployment
 
-### Community 24 - "CLAUDE Commands"
+### Community 16 - "Bug/Feedback Report API"
+Cohesion: 0.40
+Nodes (5): BugPayload, BugReportPayload, FeedbackPayload, isValidPayload(), POST()
+
+### Community 17 - "Home Page & Enhance Defaults"
 Cohesion: 0.23
 Nodes (10): dmMono, metadata, spaceGrotesk, CookieBanner(), GlobalErrorListener(), ConsentState, getConsent(), getCrashConsent() (+2 more)
 
-### Community 25 - "CLAUDE Environment Vars"
-Cohesion: 0.25
-Nodes (8): Build and Push Web Dev Job, Build and Push Web Prod Job, Gate: Changes on Frontend Job, next.svg (Next.js wordmark logo), vercel.svg (Vercel triangle logo), image2 CLI Tool, Local Mode (Docker/img2 ui), Vercel Frontend Deployment
+### Community 18 - "CI/CD Server Build Jobs"
+Cohesion: 0.67
+Nodes (3): Build and Push Dev (Server) Job, Build and Push Prod (Server) Job, Gate: Changes on Server Job
 
 ## Ambiguous Edges - Review These
 - `Vercel Frontend Deployment` → `next.svg (Next.js wordmark logo)`  [AMBIGUOUS]
@@ -181,13 +181,13 @@ _Questions this graph is uniquely positioned to answer:_
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
 - **What is the exact relationship between `Vercel Frontend Deployment` and `vercel.svg (Vercel triangle logo)`?**
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
-- **Why does `MockImage` connect `Server Image Converters` to `App Shell & Crash Reporting`?**
+- **Why does `MockImage` connect `Image Converters (Server)` to `App Shell & Error Boundaries`?**
   _High betweenness centrality (0.171) - this node is a cross-community bridge._
-- **Why does `convert_to_ansi_grid()` connect `Server Image Converters` to `FastAPI Server Routes`?**
+- **Why does `convert_to_ansi_grid()` connect `Image Converters (Server)` to `FastAPI Server Routes`?**
   _High betweenness centrality (0.094) - this node is a cross-community bridge._
 - **Are the 10 inferred relationships involving `convert_to_ascii_grid()` (e.g. with `convert_ascii()` and `test_ascii_grid_blur_changes_pixels()`) actually correct?**
   _`convert_to_ascii_grid()` has 10 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `FeedbackPayload`, `BugPayload`, `BugReportPayload` to the rest of the system?**
   _126 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Image Conversion Pipeline` be split into smaller, more focused modules?**
+- **Should `Output Header & Session UI` be split into smaller, more focused modules?**
   _Cohesion score 0.10960960960960961 - nodes in this community are weakly interconnected._
