@@ -16,7 +16,7 @@ httpcore2==2.5.0
 httptools==0.8.0
 httpx2==2.5.0
 idna==3.18
-image2 @ git+https://github.com/c0dezer019/image2.git@575f9894cc72fc5165da79904d359403f25d3c93
+image2 @ git+https://github.com/c0dezer019/image2.git@4156b8ae1a9a707e035217057d2cd880c0b10cf1
 limits==5.8.0
 packaging==26.2
 pillow==12.2.0
