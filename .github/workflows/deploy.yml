@@ -92,7 +92,7 @@ jobs:
         run: npm install -g @railway/cli
 
       - name: Deploy to Railway
-        run: railway redeploy -s image2 --yes
+        run: railway redeploy -s image2-server --yes
         env:
           RAILWAY_TOKEN: ${{ env.RAILWAY_TOKEN }}
 
