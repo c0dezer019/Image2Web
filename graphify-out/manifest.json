@@ -1,4 +1,9 @@
 {
+  ".claude/settings.json": {
+    "mtime": 1783361194.7840564,
+    "ast_hash": "e51077b6a7f1f67afc748f1a32a1557d",
+    "semantic_hash": "e51077b6a7f1f67afc748f1a32a1557d"
+  },
   "app/api/bug/route.ts": {
     "mtime": 1781983912.1704068,
     "ast_hash": "f7f2f0eea9d19858ba956fd77222b688",
@@ -40,9 +45,9 @@
     "semantic_hash": "43624e650b7ee74d51be1170aa8ddb68"
   },
   "app/page.tsx": {
-    "mtime": 1781983912.171407,
-    "ast_hash": "29908e01b7cb101cb595b364b18a2c90",
-    "semantic_hash": "29908e01b7cb101cb595b364b18a2c90"
+    "mtime": 1783362362.5531843,
+    "ast_hash": "1835d59e139d250444725c622bc027a4",
+    "semantic_hash": "1835d59e139d250444725c622bc027a4"
   },
   "app/privacy/page.tsx": {
     "mtime": 1781503410.4889305,
@@ -205,7 +210,7 @@
     "semantic_hash": "ab381b66c092a6529c99f2e2e5fbcc32"
   },
   "next.config.ts": {
-    "mtime": 1783356070.6819098,
+    "mtime": 1783363470.525753,
     "ast_hash": "78cf749d4b8d00acce75b80bc468ddd9",
     "semantic_hash": "78cf749d4b8d00acce75b80bc468ddd9"
   },
@@ -325,14 +330,19 @@
     "semantic_hash": "f56cf4635898f00e97408bb73e2eb79b"
   },
   ".github/workflows/deploy.yml": {
-    "mtime": 1783316974.8257997,
-    "ast_hash": "c09da2836a8cf3e3888ba6157abe2773",
-    "semantic_hash": "c09da2836a8cf3e3888ba6157abe2773"
+    "mtime": 1783363470.5177526,
+    "ast_hash": "cac21adf5136b4043a04a09299efefde",
+    "semantic_hash": "cac21adf5136b4043a04a09299efefde"
   },
   ".github/workflows/docker-image.yml": {
-    "mtime": 1783316974.8257997,
-    "ast_hash": "2a8821b26968db4316acc41d7f384ab0",
-    "semantic_hash": "2a8821b26968db4316acc41d7f384ab0"
+    "mtime": 1783363470.5187528,
+    "ast_hash": "c833bfd3485a8da3f24e7301669e11d4",
+    "semantic_hash": "c833bfd3485a8da3f24e7301669e11d4"
+  },
+  ".github/workflows/graphify-freshness.yml": {
+    "mtime": 1783361194.7840564,
+    "ast_hash": "bcb01f67b12162d3160e6a8eca156de0",
+    "semantic_hash": "bcb01f67b12162d3160e6a8eca156de0"
   },
   "AGENTS.md": {
     "mtime": 1781151833.8598194,
@@ -340,7 +350,7 @@
     "semantic_hash": "9e09241799026ac05be315a2f0b50055"
   },
   "CLAUDE.md": {
-    "mtime": 1783356017.9669118,
+    "mtime": 1783361194.7850566,
     "ast_hash": "ccdcb21e935d5a5f832887b1e3f87af7",
     "semantic_hash": "ccdcb21e935d5a5f832887b1e3f87af7"
   },
@@ -353,96 +363,6 @@
     "mtime": 1781503410.4899304,
     "ast_hash": "1fc6859fcdbf6af4ac6bc4fa8f06d203",
     "semantic_hash": "1fc6859fcdbf6af4ac6bc4fa8f06d203"
-  },
-  "docs/superpowers/plans/2026-06-10-image2-ascii-forge.md": {
-    "mtime": 1781128428.5304523,
-    "ast_hash": "e338ca7982f81d4c4088a5e01fb49623",
-    "semantic_hash": "e338ca7982f81d4c4088a5e01fb49623"
-  },
-  "docs/superpowers/plans/2026-06-14-image-compression.md": {
-    "mtime": 1781497435.4480035,
-    "ast_hash": "47f2c83b80579afa064e66e70478bef7",
-    "semantic_hash": "47f2c83b80579afa064e66e70478bef7"
-  },
-  "docs/superpowers/plans/2026-06-14-legal-pages.md": {
-    "mtime": 1781503410.4899304,
-    "ast_hash": "b1ac801cbf129c3073305b3f1919fe6d",
-    "semantic_hash": "b1ac801cbf129c3073305b3f1919fe6d"
-  },
-  "docs/superpowers/plans/2026-06-15-aspect-ratio-lock.md": {
-    "mtime": 1781552815.661362,
-    "ast_hash": "1c1d917f8096782b02e253597f0b28dd",
-    "semantic_hash": "1c1d917f8096782b02e253597f0b28dd"
-  },
-  "docs/superpowers/plans/2026-06-17-cli-download-banner.md": {
-    "mtime": 1781795024.905758,
-    "ast_hash": "be053fc4b43241caaa2c681d9520bfbd",
-    "semantic_hash": "be053fc4b43241caaa2c681d9520bfbd"
-  },
-  "docs/superpowers/plans/2026-06-17-cookie-consent-banner.md": {
-    "mtime": 1781713026.784534,
-    "ast_hash": "9caf396bc5e06c59c7663f1542c9fd8b",
-    "semantic_hash": "9caf396bc5e06c59c7663f1542c9fd8b"
-  },
-  "docs/superpowers/plans/2026-06-17-download-page.md": {
-    "mtime": 1781795024.9067578,
-    "ast_hash": "9ecfc2d734d9421130385e396c07cfd5",
-    "semantic_hash": "9ecfc2d734d9421130385e396c07cfd5"
-  },
-  "docs/superpowers/plans/2026-06-17-image2-web-local-mode.md": {
-    "mtime": 1781795020.860596,
-    "ast_hash": "bf08b7f8d03933022675660c75a56d4c",
-    "semantic_hash": "bf08b7f8d03933022675660c75a56d4c"
-  },
-  "docs/superpowers/plans/2026-06-19-crash-logging.md": {
-    "mtime": 1781905021.8879583,
-    "ast_hash": "76de7592c429e23eeeff88c454533810",
-    "semantic_hash": "76de7592c429e23eeeff88c454533810"
-  },
-  "docs/superpowers/specs/2026-06-10-image2-ascii-forge-design.md": {
-    "mtime": 1781124021.065199,
-    "ast_hash": "a7129c13bb1ad3429dfa27c17e0a6f5e",
-    "semantic_hash": "a7129c13bb1ad3429dfa27c17e0a6f5e"
-  },
-  "docs/superpowers/specs/2026-06-11-output-controls-design.md": {
-    "mtime": 1781191004.617648,
-    "ast_hash": "f732b246f5cfd0e136799c19630b195c",
-    "semantic_hash": "f732b246f5cfd0e136799c19630b195c"
-  },
-  "docs/superpowers/specs/2026-06-14-image-compression-design.md": {
-    "mtime": 1781497435.4480035,
-    "ast_hash": "8232f4b13a3483bb225fef0beb9376c3",
-    "semantic_hash": "8232f4b13a3483bb225fef0beb9376c3"
-  },
-  "docs/superpowers/specs/2026-06-14-legal-pages-design.md": {
-    "mtime": 1781503410.4899304,
-    "ast_hash": "53b19ab7e8d4261b3f9e57308f26a21c",
-    "semantic_hash": "53b19ab7e8d4261b3f9e57308f26a21c"
-  },
-  "docs/superpowers/specs/2026-06-15-aspect-ratio-lock-design.md": {
-    "mtime": 1781552815.661362,
-    "ast_hash": "c1f54c35844f18a4a0e2545147a98f57",
-    "semantic_hash": "c1f54c35844f18a4a0e2545147a98f57"
-  },
-  "docs/superpowers/specs/2026-06-17-cli-download-design.md": {
-    "mtime": 1781795024.9067578,
-    "ast_hash": "ef1268b9b3b2876217b9ebfa75b31f73",
-    "semantic_hash": "ef1268b9b3b2876217b9ebfa75b31f73"
-  },
-  "docs/superpowers/specs/2026-06-17-cookie-consent-design.md": {
-    "mtime": 1781713026.784534,
-    "ast_hash": "df2d7eb7103683f3f0cdee9ee6212a44",
-    "semantic_hash": "df2d7eb7103683f3f0cdee9ee6212a44"
-  },
-  "docs/superpowers/specs/2026-06-17-download-page-design.md": {
-    "mtime": 1781795024.9067578,
-    "ast_hash": "69d91b070c8b26f499272ce421eea7de",
-    "semantic_hash": "69d91b070c8b26f499272ce421eea7de"
-  },
-  "docs/superpowers/specs/2026-06-19-crash-logging-design.md": {
-    "mtime": 1781848607.7999814,
-    "ast_hash": "2d7403a7d58812b7cb4b0a5941d213e0",
-    "semantic_hash": "2d7403a7d58812b7cb4b0a5941d213e0"
   },
   "pnpm-workspace.yaml": {
     "mtime": 1781152685.0400422,
@@ -488,15 +408,5 @@
     "mtime": 1781151833.8658197,
     "ast_hash": "a2760511c65806022ad20adf74370ff3",
     "semantic_hash": "a2760511c65806022ad20adf74370ff3"
-  },
-  ".claude/settings.json": {
-    "mtime": 1783356017.9669118,
-    "ast_hash": "e51077b6a7f1f67afc748f1a32a1557d",
-    "semantic_hash": "e51077b6a7f1f67afc748f1a32a1557d"
-  },
-  ".github/workflows/graphify-freshness.yml": {
-    "mtime": 1783356017.9669118,
-    "ast_hash": "bcb01f67b12162d3160e6a8eca156de0",
-    "semantic_hash": "bcb01f67b12162d3160e6a8eca156de0"
   }
 }
