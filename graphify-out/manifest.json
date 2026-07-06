@@ -45,9 +45,9 @@
     "semantic_hash": "43624e650b7ee74d51be1170aa8ddb68"
   },
   "app/page.tsx": {
-    "mtime": 1783365631.0283353,
-    "ast_hash": "297626c6cbde4015328fc4c74d438c2a",
-    "semantic_hash": "297626c6cbde4015328fc4c74d438c2a"
+    "mtime": 1783370944.0449107,
+    "ast_hash": "a6f0aac7999d0f58e352344fd39c7e56",
+    "semantic_hash": "a6f0aac7999d0f58e352344fd39c7e56"
   },
   "app/privacy/page.tsx": {
     "mtime": 1781503410.4889305,
@@ -380,7 +380,7 @@
     "semantic_hash": "3988c0d54908b446973824a3673ea4fa"
   },
   "server/requirements.txt": {
-    "mtime": 1783355326.6140664,
+    "mtime": 1783372524.5127282,
     "ast_hash": "71b4e0d5b8df585b15a587c5774b0bc3",
     "semantic_hash": "71b4e0d5b8df585b15a587c5774b0bc3"
   },
