@@ -135,6 +135,9 @@ jobs:
             );
             core.setOutput('should_deploy', String(touchedFrontend));
 
+  # Frontend is deployed via Vercel (see README). This image is the
+  # self-hosted/local-mode path consumed by `docker compose up -d` and
+  # `img2 ui` from the image2 CLI, not the Vercel deploy.
   build-and-push-web-dev:
     name: Build and Push Web Dev
     needs: gate-web
