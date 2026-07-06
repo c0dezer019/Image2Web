@@ -128,6 +128,12 @@ export default function Home() {
 
   const handleFile = useCallback((f: File) => {
     setError(null);
+    // New image: reset enhancement controls to fixed defaults.
+    setContrast(FIXED_ENHANCE_DEFAULTS.contrast);
+    setBrightness(FIXED_ENHANCE_DEFAULTS.brightness);
+    setSharpness(2.5);
+    setSaturate(FIXED_ENHANCE_DEFAULTS.saturate);
+    setMinLum(FIXED_ENHANCE_DEFAULTS.minLum);
     // Pre-fill the Image width/height controls with the source image's real
     // pixel dimensions, mirroring the image2 CLI's use of the actual image
     // size when deriving cols/rows. Read from the original file, before any
