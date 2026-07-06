@@ -1,4 +1,4 @@
-# Graph Report - .  (2026-07-06)
+# Graph Report - Image2-Web  (2026-07-06)
 
 ## Corpus Check
 - 6 files · ~53,031 words
