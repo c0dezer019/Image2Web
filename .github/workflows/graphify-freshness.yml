@@ -26,8 +26,9 @@ jobs:
       - name: Determine changed files
         id: diff
         run: |
-          git fetch origin "${{ github.base_ref }}" --depth=1
-          CHANGED=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+          CHANGED=$(git diff --name-only "${BASE_SHA}...${HEAD_SHA}")
           {
             echo "changed<<GRAPHIFY_DIFF_EOF"
             echo "$CHANGED"
