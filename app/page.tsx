@@ -61,15 +61,6 @@ export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const requestIdRef = useRef(0);
   const originalFileRef = useRef<File | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 760px)");
-    const update = () => setIsMobile(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
 
   const sourceAspectRatio = sourceWidth > 0 && sourceHeight > 0 ? sourceWidth / sourceHeight : null;
 
@@ -286,7 +277,7 @@ export default function Home() {
   }
 
   const outputSection = (
-    <div className="section-output">
+    <div className="section-output" style={{ order: 3 }}>
       <OutputHeader
         mode={mode}
         onModeChange={setMode}
@@ -311,6 +302,10 @@ export default function Home() {
     <div style={{ minHeight: "100vh", background: COLORS.bg, color: COLORS.text, position: "relative", overflow: "hidden" }}>
       <style>{`
         @media (max-width: 1080px) { .cli-gutter { display: none !important; } }
+        @media (max-width: 760px) {
+          .section-controls { order: 3 !important; }
+          .section-output { order: 2 !important; }
+        }
       `}</style>
       <Link
         href="/download"
@@ -406,13 +401,11 @@ export default function Home() {
           </p>
         </header>
 
-        <div className="section-drop">
+        <div className="section-drop" style={{ order: 1 }}>
           <DropZone fileName={file?.name ?? null} onFile={handleFile} onError={setError} />
         </div>
 
-        {isMobile && outputSection}
-
-        <div className="section-controls">
+        <div className="section-controls" style={{ order: 2 }}>
           <ControlsBar
             mode={mode}
             width={width}
@@ -462,9 +455,9 @@ export default function Home() {
           />
         </div>
 
-        {!isMobile && outputSection}
+        {outputSection}
 
-        <div>
+        <div style={{ order: 4 }}>
           <VersionFooter />
           <Footer />
         </div>
