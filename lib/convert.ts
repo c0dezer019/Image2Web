@@ -1,5 +1,5 @@
 import { charCellSize } from "./canvas-render";
-import type { AnsiResult, AsciiResult, AutoParams, ConvertParams, HealthResponse } from "./types";
+import type { AnsiResult, AsciiResult, ConvertParams, HealthResponse } from "./types";
 
 // Calls go straight to the image2 FastAPI server, bypassing Next.js API
 // routes. Vercel Functions cap request bodies at 4.5MB, which 413s on
@@ -74,41 +74,6 @@ export const DENSE_FONT_SIZE_CAP = 8;
 export function effectiveFontSize(fontSize: number, dense: boolean): number {
   const safe = Math.max(1, fontSize);
   return dense ? Math.min(safe, DENSE_FONT_SIZE_CAP) : safe;
-}
-
-/**
- * Fetch auto-derived contrast/brightness/saturate/min_lum defaults for an
- * image, via `imgcommon.compute_auto_params`. Used to pre-fill the
- * enhancement sliders per uploaded image, mirroring the image2 CLI's
- * auto-detect-by-default behavior.
- *
- * `invert`/`blur` are forwarded so auto-detect runs on the post-invert/blur
- * image, matching the CLI's pipeline order (invert/blur happen before
- * `resolve_enhance_params`).
- */
-export async function getAutoParams(file: Blob, invert: boolean, blur: number): Promise<AutoParams> {
-  const form = new FormData();
-  form.append("file", file);
-  form.append("invert", String(invert));
-  form.append("blur", String(blur));
-
-  const res = await fetch(`${SERVER_URL}/analyze`, {
-    method: "POST",
-    body: form,
-  });
-
-  if (!res.ok) {
-    const body = await res.json().catch(() => ({}));
-    throw new Error(body.detail || `Analyze failed (${res.status})`);
-  }
-
-  const data = await res.json();
-  return {
-    contrast: data.contrast,
-    brightness: data.brightness,
-    saturate: data.saturate,
-    minLum: data.min_lum,
-  };
 }
 
 export async function convertImage(
