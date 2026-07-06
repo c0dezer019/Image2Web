@@ -41,7 +41,7 @@ the active `MAX_OUTPUT_*` limits at WARNING. Set `LOG_LEVEL` (e.g. `DEBUG` or
 The browser calls the FastAPI server directly (`lib/convert.ts`) — image
 uploads no longer go through a Next.js API route. This avoids Vercel
 Functions' 4.5MB request body limit, which 413'd on larger images when the
-upload was proxied through `/api/analyze` and `/api/convert`.
+upload was proxied through `/api/convert`.
 
 Set `NEXT_PUBLIC_IMAGE2_SERVER_URL` to the deployed server's base URL (e.g.
 `https://image2-server.fly.dev`) as a Vercel environment variable. Since it's
