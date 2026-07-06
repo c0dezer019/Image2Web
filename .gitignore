@@ -43,6 +43,10 @@ next-env.d.ts
 # worktrees
 .worktrees/
 
+# claude local settings (machine-specific, may contain local permissions/paths)
+.claude/settings.local.json
+server/.claude/settings.local.json
+
 # Python server
 server/.venv/
 server/__pycache__/
