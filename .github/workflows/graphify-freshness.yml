@@ -1,0 +1,83 @@
+name: Graphify Freshness Check
+
+# Gate: if this PR touches any file graphify indexes (code/docs/paper/image),
+# graphify-out/graph.json must be updated in the same PR, or the PR must carry
+# the "graph-updated" label. Run `graphify update .` locally and commit the
+# result to satisfy this without the label.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  check-graph-freshness:
+    name: Check graph.json is current
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Determine changed files
+        id: diff
+        run: |
+          git fetch origin "${{ github.base_ref }}" --depth=1
+          CHANGED=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")
+          {
+            echo "changed<<GRAPHIFY_DIFF_EOF"
+            echo "$CHANGED"
+            echo "GRAPHIFY_DIFF_EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Evaluate freshness
+        env:
+          CHANGED_FILES: ${{ steps.diff.outputs.changed }}
+          HAS_LABEL: ${{ contains(github.event.pull_request.labels.*.name, 'graph-updated') }}
+        run: |
+          echo "Changed files:"
+          echo "$CHANGED_FILES"
+
+          # Extensions graphify extracts from (code/document/paper/image types).
+          EXTRACTABLE_REGEX='\.(ts|tsx|js|jsx|mjs|cjs|py|go|rs|java|rb|php|c|cpp|cc|h|hpp|cs|swift|kt|md|mdx|txt|rst|pdf|png|jpe?g|gif|webp|svg|bmp)$'
+
+          NEEDS_UPDATE=false
+          while IFS= read -r f; do
+            [ -z "$f" ] && continue
+            case "$f" in
+              graphify-out/*) continue ;;
+            esac
+            if echo "$f" | grep -qE "$EXTRACTABLE_REGEX"; then
+              NEEDS_UPDATE=true
+              break
+            fi
+          done <<< "$CHANGED_FILES"
+
+          if [ "$NEEDS_UPDATE" = false ]; then
+            echo "No graphify-extractable files changed in this PR - nothing to check."
+            exit 0
+          fi
+
+          GRAPH_CHANGED=false
+          if echo "$CHANGED_FILES" | grep -qx 'graphify-out/graph\.json'; then
+            GRAPH_CHANGED=true
+          fi
+
+          if [ "$GRAPH_CHANGED" = true ]; then
+            echo "graphify-out/graph.json was updated in this PR. OK."
+            exit 0
+          fi
+
+          if [ "$HAS_LABEL" = "true" ]; then
+            echo "'graph-updated' label present - bypassing freshness requirement."
+            exit 0
+          fi
+
+          echo "::error::Files that graphify indexes changed, but graphify-out/graph.json was not updated in this PR."
+          echo "Fix: run 'graphify update .' locally, commit graphify-out/, and push."
+          echo "Bypass: apply the 'graph-updated' label if this change genuinely doesn't need a graph refresh."
+          exit 1
